@@ -38,6 +38,7 @@ public class MtvBlockInit {
 
     public static Item registerRedstoneTorchItem(String name, Item torchItem) {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, torchItem));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, torchItem));
         return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
     }
     
