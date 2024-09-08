@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#quad-mstv-mtv:redstone_torches"
+            "tag": "quad-mstv-mtv:redstone_torches"
           }
         ]
       },
