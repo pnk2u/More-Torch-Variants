@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fire_torches",
+  "key": {
+    "/": {
+      "item": "minecraft:bamboo"
+    },
+    "C": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "pattern": [
+    "C  ",
+    "/  "
+  ],
+  "result": {
+    "count": 4,
+    "id": "quad-mstv-mtv:bamboo_torch"
+  }
+}

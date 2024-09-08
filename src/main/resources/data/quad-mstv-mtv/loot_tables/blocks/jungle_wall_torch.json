@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "quad-mstv-mtv:jungle_torch"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "quad-mstv-mtv:blocks/jungle_wall_torch"
+}
