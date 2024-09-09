@@ -8,6 +8,13 @@
       }
     },
     {
+      "structures": "#quad:is/birch",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:birch_wall_torch"
+      }
+    },
+    {
       "structures": "#quad:is/spruce",
       "block_replacement": {
         "targets": "minecraft:torch",
@@ -17,8 +24,22 @@
     {
       "structures": "#quad:is/spruce",
       "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:spruce_wall_torch"
+      }
+    },
+    {
+      "structures": "#quad:is/spruce",
+      "block_replacement": {
         "targets": "minecraft:redstone_torch",
         "replacement": "quad-mstv-mtv:spruce_redstone_torch"
+      }
+    },
+    {
+      "structures": "#quad:is/spruce",
+      "block_replacement": {
+        "targets": "minecraft:redstone_wall_torch",
+        "replacement": "quad-mstv-mtv:spruce_redstone_wall_torch"
       }
     },
     {
@@ -31,8 +52,22 @@
     {
       "structures": "#quad:is/dark_oak",
       "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:dark_oak_wall_torch"
+      }
+    },
+    {
+      "structures": "#quad:is/dark_oak",
+      "block_replacement": {
         "targets": "minecraft:redstone_torch",
         "replacement": "quad-mstv-mtv:dark_oak_redstone_torch"
+      }
+    },
+    {
+      "structures": "#quad:is/dark_oak",
+      "block_replacement": {
+        "targets": "minecraft:redstone_wall_torch",
+        "replacement": "quad-mstv-mtv:dark_oak_redstone_wall_torch"
       }
     },
     {
@@ -43,10 +78,24 @@
       }
     },
     {
+      "structures": "#quad:is/jungle",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:jungle_wall_torch"
+      }
+    },
+    {
       "structures": "#quad:is/acacia",
       "block_replacement": {
         "targets": "minecraft:torch",
         "replacement": "quad-mstv-mtv:acacia_torch"
+      }
+    },
+    {
+      "structures": "#quad:is/acacia",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:acacia_wall_torch"
       }
     },
     {
@@ -57,10 +106,24 @@
       }
     },
     {
+      "structures": "#quad:is/mangrove",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:mangrove_wall_torch"
+      }
+    },
+    {
       "structures": "#quad:is/cherry",
       "block_replacement": {
         "targets": "minecraft:torch",
         "replacement": "quad-mstv-mtv:cherry_torch"
+      }
+    },
+    {
+      "structures": "#quad:is/cherry",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:cherry_wall_torch"
       }
     },
     {
@@ -71,6 +134,13 @@
       }
     },
     {
+      "structures": "#quad:is/bamboo",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:bamboo_wall_torch"
+      }
+    },
+    {
       "structures": "#quad:is/crimson",
       "block_replacement": {
         "targets": "minecraft:torch",
@@ -78,10 +148,24 @@
       }
     },
     {
+      "structures": "#quad:is/crimson",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:crimson_wall_torch"
+      }
+    },
+    {
       "structures": "#quad:is/warped",
       "block_replacement": {
         "targets": "minecraft:torch",
         "replacement": "quad-mstv-mtv:warped_torch"
+      }
+    },
+    {
+      "structures": "#quad:is/warped",
+      "block_replacement": {
+        "targets": "minecraft:wall_torch",
+        "replacement": "quad-mstv-mtv:warped_wall_torch"
       }
     }
   ]
