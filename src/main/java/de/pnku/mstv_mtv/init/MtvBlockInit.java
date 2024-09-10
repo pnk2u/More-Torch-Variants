@@ -41,6 +41,8 @@ public class MtvBlockInit {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, torchItem));
         return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
     }
+
+    public static void register() {};
     
     // Fire Torch Blocks + Fire Wall Torch Blocks + Fire Torch Items (Reverse Order)
     public static final Block WARPED_TORCH = registerTorchBlock("warped_torch", new TorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).sound(SoundType.NETHER_WOOD), ParticleTypes.FLAME));
