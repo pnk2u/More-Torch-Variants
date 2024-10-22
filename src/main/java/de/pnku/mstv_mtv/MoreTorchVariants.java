@@ -1,6 +1,7 @@
 package de.pnku.mstv_mtv;
 
 import de.pnku.mstv_mtv.init.MtvBlockInit;
+import de.pnku.mstv_mtv.init.MtvItemInit;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.ResourceLocation;
@@ -16,7 +17,8 @@ public class MoreTorchVariants implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
-		MtvBlockInit.register();
+		MtvBlockInit.registerTorchBlocks();
+		MtvItemInit.registerTorchItems();
 	}
 
 	public static ResourceLocation asId(String path) {

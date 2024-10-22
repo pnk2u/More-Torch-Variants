@@ -19,3 +19,129 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+public static final Block WARPED_TORCH = registerTorchBlock("warped");
+    public static final Block WARPED_WALL_TORCH = registerTorchBlock("warped", WARPED_TORCH);
+    public static final Item WARPED_TORCH_I = registerTorchItem("warped", WARPED_TORCH, WARPED_WALL_TORCH);
+
+    public static final Block CRIMSON_TORCH = registerTorchBlock("crimson");
+    public static final Block CRIMSON_WALL_TORCH = registerTorchBlock("crimson", CRIMSON_TORCH);
+    public static final Item CRIMSON_TORCH_I = registerTorchItem("crimson", CRIMSON_TORCH, CRIMSON_WALL_TORCH);
+
+    public static final Block BAMBOO_TORCH = registerTorchBlock("bamboo");
+    public static final Block BAMBOO_WALL_TORCH = registerTorchBlock("bamboo", BAMBOO_TORCH);
+    public static final Item BAMBOO_TORCH_I = registerTorchItem("bamboo", BAMBOO_TORCH, BAMBOO_WALL_TORCH);
+
+    public static final Block CHERRY_TORCH = registerTorchBlock("cherry");
+    public static final Block CHERRY_WALL_TORCH = registerTorchBlock("cherry", CHERRY_TORCH);
+    public static final Item CHERRY_TORCH_I = registerTorchItem("cherry", CHERRY_TORCH, CHERRY_WALL_TORCH);
+
+    public static final Block MANGROVE_TORCH = registerTorchBlock("mangrove");
+    public static final Block MANGROVE_WALL_TORCH = registerTorchBlock("mangrove", MANGROVE_TORCH);
+    public static final Item MANGROVE_TORCH_I = registerTorchItem("mangrove", MANGROVE_TORCH, MANGROVE_WALL_TORCH);
+
+    public static final Block DARK_OAK_TORCH = registerTorchBlock("dark_oak");
+    public static final Block DARK_OAK_WALL_TORCH = registerTorchBlock("dark_oak", DARK_OAK_TORCH);
+    public static final Item DARK_OAK_TORCH_I = registerTorchItem("dark_oak", DARK_OAK_TORCH, DARK_OAK_WALL_TORCH);
+
+    public static final Block ACACIA_TORCH = registerTorchBlock("acacia");
+    public static final Block ACACIA_WALL_TORCH = registerTorchBlock("acacia", ACACIA_TORCH);
+    public static final Item ACACIA_TORCH_I = registerTorchItem("acacia", ACACIA_TORCH, ACACIA_WALL_TORCH);
+
+    public static final Block JUNGLE_TORCH = registerTorchBlock("jungle");
+    public static final Block JUNGLE_WALL_TORCH = registerTorchBlock("jungle", JUNGLE_TORCH);
+    public static final Item JUNGLE_TORCH_I = registerTorchItem("jungle", JUNGLE_TORCH, JUNGLE_WALL_TORCH);
+
+    public static final Block BIRCH_TORCH = registerTorchBlock("birch");
+    public static final Block BIRCH_WALL_TORCH = registerTorchBlock("birch", BIRCH_TORCH);
+    public static final Item BIRCH_TORCH_I = registerTorchItem("birch", BIRCH_TORCH, BIRCH_WALL_TORCH);
+
+    public static final Block SPRUCE_TORCH = registerTorchBlock("spruce");
+    public static final Block SPRUCE_WALL_TORCH = registerTorchBlock("spruce", SPRUCE_TORCH);
+    public static final Item SPRUCE_TORCH_I = registerTorchItem("spruce", SPRUCE_TORCH, SPRUCE_WALL_TORCH);
+
+
+    // Soul Torch BLocks + Soul Wall Torch Blocks + Soul Torch Items (Reverse Order)
+    public static final Block WARPED_SOUL_TORCH = registerTorchBlock("warped", "soul");
+    public static final Block WARPED_SOUL_WALL_TORCH = registerTorchBlock("warped", WARPED_SOUL_TORCH, "soul");
+    public static final Item WARPED_SOUL_TORCH_I = registerTorchItem("warped", WARPED_SOUL_TORCH, WARPED_SOUL_WALL_TORCH, "soul");
+
+    public static final Block CRIMSON_SOUL_TORCH = registerTorchBlock("crimson", "soul");
+    public static final Block CRIMSON_SOUL_WALL_TORCH = registerTorchBlock("crimson", CRIMSON_SOUL_TORCH, "soul");
+    public static final Item CRIMSON_SOUL_TORCH_I = registerTorchItem("crimson", CRIMSON_SOUL_TORCH, CRIMSON_SOUL_WALL_TORCH, "soul");
+
+    public static final Block BAMBOO_SOUL_TORCH = registerTorchBlock("bamboo", "soul");
+    public static final Block BAMBOO_SOUL_WALL_TORCH = registerTorchBlock("bamboo", BAMBOO_SOUL_TORCH, "soul");
+    public static final Item BAMBOO_SOUL_TORCH_I = registerTorchItem("bamboo", BAMBOO_SOUL_TORCH, BAMBOO_SOUL_WALL_TORCH, "soul");
+
+    public static final Block CHERRY_SOUL_TORCH = registerTorchBlock("cherry", "soul");
+    public static final Block CHERRY_SOUL_WALL_TORCH = registerTorchBlock("cherry", CHERRY_SOUL_TORCH, "soul");
+    public static final Item CHERRY_SOUL_TORCH_I = registerTorchItem("cherry", CHERRY_SOUL_TORCH, CHERRY_SOUL_WALL_TORCH, "soul");
+
+    public static final Block MANGROVE_SOUL_TORCH = registerTorchBlock("mangrove", "soul");
+    public static final Block MANGROVE_SOUL_WALL_TORCH = registerTorchBlock("mangrove", MANGROVE_SOUL_TORCH, "soul");
+    public static final Item MANGROVE_SOUL_TORCH_I = registerTorchItem("mangrove", MANGROVE_SOUL_TORCH, MANGROVE_SOUL_WALL_TORCH, "soul");
+
+    public static final Block DARK_OAK_SOUL_TORCH = registerTorchBlock("dark_oak", "soul");
+    public static final Block DARK_OAK_SOUL_WALL_TORCH = registerTorchBlock("dark_oak", DARK_OAK_SOUL_TORCH, "soul");
+    public static final Item DARK_OAK_SOUL_TORCH_I = registerTorchItem("dark_oak", DARK_OAK_SOUL_TORCH, DARK_OAK_SOUL_WALL_TORCH, "soul");
+
+    public static final Block ACACIA_SOUL_TORCH = registerTorchBlock("acacia", "soul");
+    public static final Block ACACIA_SOUL_WALL_TORCH = registerTorchBlock("acacia", ACACIA_SOUL_TORCH, "soul");
+    public static final Item ACACIA_SOUL_TORCH_I = registerTorchItem("acacia", ACACIA_SOUL_TORCH, ACACIA_SOUL_WALL_TORCH, "soul");
+
+    public static final Block JUNGLE_SOUL_TORCH = registerTorchBlock("jungle", "soul");
+    public static final Block JUNGLE_SOUL_WALL_TORCH = registerTorchBlock("jungle", JUNGLE_SOUL_TORCH, "soul");
+    public static final Item JUNGLE_SOUL_TORCH_I = registerTorchItem("jungle", JUNGLE_SOUL_TORCH, JUNGLE_SOUL_WALL_TORCH, "soul");
+
+    public static final Block BIRCH_SOUL_TORCH = registerTorchBlock("birch", "soul");
+    public static final Block BIRCH_SOUL_WALL_TORCH = registerTorchBlock("birch", BIRCH_SOUL_TORCH, "soul");
+    public static final Item BIRCH_SOUL_TORCH_I = registerTorchItem("birch", BIRCH_SOUL_TORCH, BIRCH_SOUL_WALL_TORCH, "soul");
+
+    public static final Block SPRUCE_SOUL_TORCH = registerTorchBlock("spruce", "soul");
+    public static final Block SPRUCE_SOUL_WALL_TORCH = registerTorchBlock("spruce", SPRUCE_SOUL_TORCH, "soul");
+    public static final Item SPRUCE_SOUL_TORCH_I = registerTorchItem("spruce", SPRUCE_SOUL_TORCH, SPRUCE_SOUL_WALL_TORCH, "soul");
+
+
+    // Redstone Torch BLocks + Redstone Wall Torch Blocks + Redstone Torch Items (Reverse Order)
+    public static final Block WARPED_REDSTONE_TORCH = registerTorchBlock("warped", "redstone");
+    public static final Block WARPED_REDSTONE_WALL_TORCH = registerTorchBlock("warped", WARPED_REDSTONE_TORCH, "redstone");
+    public static final Item WARPED_REDSTONE_TORCH_I = registerTorchItem("warped", WARPED_REDSTONE_TORCH, WARPED_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block CRIMSON_REDSTONE_TORCH = registerTorchBlock("crimson", "redstone");
+    public static final Block CRIMSON_REDSTONE_WALL_TORCH = registerTorchBlock("crimson", CRIMSON_REDSTONE_TORCH, "redstone");
+    public static final Item CRIMSON_REDSTONE_TORCH_I = registerTorchItem("crimson", CRIMSON_REDSTONE_TORCH, CRIMSON_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block BAMBOO_REDSTONE_TORCH = registerTorchBlock("bamboo", "redstone");
+    public static final Block BAMBOO_REDSTONE_WALL_TORCH = registerTorchBlock("bamboo", BAMBOO_REDSTONE_TORCH, "redstone");
+    public static final Item BAMBOO_REDSTONE_TORCH_I = registerTorchItem("bamboo", BAMBOO_REDSTONE_TORCH, BAMBOO_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block CHERRY_REDSTONE_TORCH = registerTorchBlock("cherry", "redstone");
+    public static final Block CHERRY_REDSTONE_WALL_TORCH = registerTorchBlock("cherry", CHERRY_REDSTONE_TORCH, "redstone");
+    public static final Item CHERRY_REDSTONE_TORCH_I = registerTorchItem("cherry", CHERRY_REDSTONE_TORCH, CHERRY_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block MANGROVE_REDSTONE_TORCH = registerTorchBlock("mangrove", "redstone");
+    public static final Block MANGROVE_REDSTONE_WALL_TORCH = registerTorchBlock("mangrove", MANGROVE_REDSTONE_TORCH, "redstone");
+    public static final Item MANGROVE_REDSTONE_TORCH_I = registerTorchItem("mangrove", MANGROVE_REDSTONE_TORCH, MANGROVE_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block DARK_OAK_REDSTONE_TORCH = registerTorchBlock("dark_oak", "redstone");
+    public static final Block DARK_OAK_REDSTONE_WALL_TORCH = registerTorchBlock("dark_oak", DARK_OAK_REDSTONE_TORCH, "redstone");
+    public static final Item DARK_OAK_REDSTONE_TORCH_I = registerTorchItem("dark_oak", DARK_OAK_REDSTONE_TORCH, DARK_OAK_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block ACACIA_REDSTONE_TORCH = registerTorchBlock("acacia", "redstone");
+    public static final Block ACACIA_REDSTONE_WALL_TORCH = registerTorchBlock("acacia", ACACIA_REDSTONE_TORCH, "redstone");
+    public static final Item ACACIA_REDSTONE_TORCH_I = registerTorchItem("acacia", ACACIA_REDSTONE_TORCH, ACACIA_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block JUNGLE_REDSTONE_TORCH = registerTorchBlock("jungle", "redstone");
+    public static final Block JUNGLE_REDSTONE_WALL_TORCH = registerTorchBlock("jungle", JUNGLE_REDSTONE_TORCH, "redstone");
+    public static final Item JUNGLE_REDSTONE_TORCH_I = registerTorchItem("jungle", JUNGLE_REDSTONE_TORCH, JUNGLE_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block BIRCH_REDSTONE_TORCH = registerTorchBlock("birch", "redstone");
+    public static final Block BIRCH_REDSTONE_WALL_TORCH = registerTorchBlock("birch", BIRCH_REDSTONE_TORCH, "redstone");
+    public static final Item BIRCH_REDSTONE_TORCH_I = registerTorchItem("birch", BIRCH_REDSTONE_TORCH, BIRCH_REDSTONE_WALL_TORCH, "redstone");
+
+    public static final Block SPRUCE_REDSTONE_TORCH = registerTorchBlock("spruce", "redstone");
+    public static final Block SPRUCE_REDSTONE_WALL_TORCH = registerTorchBlock("spruce", SPRUCE_REDSTONE_TORCH, "redstone");
+    public static final Item SPRUCE_REDSTONE_TORCH_I = registerTorchItem("spruce", SPRUCE_REDSTONE_TORCH, SPRUCE_REDSTONE_WALL_TORCH, "redstone");
+
+WARPED_TORCH, WARPED_WALL_TORCH, CRIMSON_TORCH, CRIMSON_WALL_TORCH, BAMBOO_TORCH, BAMBOO_WALL_TORCH, CHERRY_TORCH, CHERRY_WALL_TORCH, MANGROVE_TORCH, MANGROVE_WALL_TORCH, DARK_OAK_TORCH, DARK_OAK_WALL_TORCH, ACACIA_TORCH, ACACIA_WALL_TORCH, JUNGLE_TORCH, JUNGLE_WALL_TORCH, BIRCH_TORCH, BIRCH_WALL_TORCH, SPRUCE_TORCH, SPRUCE_WALL_TORCH, WARPED_SOUL_TORCH, WARPED_SOUL_WALL_TORCH, CRIMSON_SOUL_TORCH, CRIMSON_SOUL_WALL_TORCH, BAMBOO_SOUL_TORCH, BAMBOO_SOUL_WALL_TORCH, CHERRY_SOUL_TORCH, CHERRY_SOUL_WALL_TORCH, MANGROVE_SOUL_TORCH, MANGROVE_SOUL_WALL_TORCH, DARK_OAK_SOUL_TORCH, DARK_OAK_SOUL_WALL_TORCH, ACACIA_SOUL_TORCH, ACACIA_SOUL_WALL_TORCH, JUNGLE_SOUL_TORCH, JUNGLE_SOUL_WALL_TORCH, BIRCH_SOUL_TORCH, BIRCH_SOUL_WALL_TORCH, SPRUCE_SOUL_TORCH, SPRUCE_SOUL_WALL_TORCH, WARPED_REDSTONE_TORCH, WARPED_REDSTONE_WALL_TORCH, CRIMSON_REDSTONE_TORCH, CRIMSON_REDSTONE_WALL_TORCH, BAMBOO_REDSTONE_TORCH, BAMBOO_REDSTONE_WALL_TORCH, CHERRY_REDSTONE_TORCH, CHERRY_REDSTONE_WALL_TORCH, MANGROVE_REDSTONE_TORCH, MANGROVE_REDSTONE_WALL_TORCH, DARK_OAK_REDSTONE_TORCH, DARK_OAK_REDSTONE_WALL_TORCH, ACACIA_REDSTONE_TORCH, ACACIA_REDSTONE_WALL_TORCH, JUNGLE_REDSTONE_TORCH, JUNGLE_REDSTONE_WALL_TORCH, BIRCH_REDSTONE_TORCH, BIRCH_REDSTONE_WALL_TORCH, SPRUCE_REDSTONE_TORCH, SPRUCE_REDSTONE_WALL_TORCH

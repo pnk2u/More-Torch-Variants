@@ -1,171 +1,249 @@
 package de.pnku.mstv_mtv.init;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.core.Direction;
+import de.pnku.mstv_mtv.MoreTorchVariants;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.StandingAndWallBlockItem;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.PushReaction;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static de.pnku.mstv_mtv.MoreTorchVariants.asId;
+import static de.pnku.mstv_mtv.MoreTorchVariants.*;
+import static net.minecraft.world.level.block.Blocks.litBlockEmission;
 
 public class MtvBlockInit {
 
-    public static final List<Block> more_torch_blocks = new ArrayList<>();
 
-    private static Block registerTorchBlock(String name, Block torchBlock) {
-        more_torch_blocks.add(torchBlock);
-        return Registry.register(BuiltInRegistries.BLOCK, asId(name), torchBlock);
-    }
-
-    public static Item registerFireTorchItem(String name, Item torchItem) {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.TORCH, torchItem));
-        return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
-    }
-
-    public static Item registerSoulTorchItem(String name, Item torchItem) {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.SOUL_TORCH, torchItem));
-        return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
-    }
-
-    public static Item registerRedstoneTorchItem(String name, Item torchItem) {
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, torchItem));
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, torchItem));
-        return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
-    }
-
-    public static void register() {};
     
     // Fire Torch Blocks + Fire Wall Torch Blocks + Fire Torch Items (Reverse Order)
-    public static final Block WARPED_TORCH = registerTorchBlock("warped_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Block WARPED_WALL_TORCH = registerTorchBlock("warped_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(WARPED_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item WARPED_TORCH_I = registerFireTorchItem("warped_torch", new StandingAndWallBlockItem(WARPED_TORCH, WARPED_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block WARPED_TORCH = createTorchBlock("warped");
+    public static final Block WARPED_WALL_TORCH = createTorchBlock("warped", WARPED_TORCH);
 
-    public static final Block CRIMSON_TORCH = registerTorchBlock("crimson_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Block CRIMSON_WALL_TORCH = registerTorchBlock("crimson_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(CRIMSON_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item CRIMSON_TORCH_I = registerFireTorchItem("crimson_torch", new StandingAndWallBlockItem(CRIMSON_TORCH, CRIMSON_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block CRIMSON_TORCH = createTorchBlock("crimson");
+    public static final Block CRIMSON_WALL_TORCH = createTorchBlock("crimson", CRIMSON_TORCH);
 
-    public static final Block BAMBOO_TORCH = registerTorchBlock("bamboo_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).sound(SoundType.BAMBOO_WOOD)));
-    public static final Block BAMBOO_WALL_TORCH = registerTorchBlock("bamboo_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(BAMBOO_TORCH).sound(SoundType.BAMBOO_WOOD)));
-    public static final Item BAMBOO_TORCH_I = registerFireTorchItem("bamboo_torch", new StandingAndWallBlockItem(BAMBOO_TORCH, BAMBOO_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block BAMBOO_TORCH = createTorchBlock("bamboo");
+    public static final Block BAMBOO_WALL_TORCH = createTorchBlock("bamboo", BAMBOO_TORCH);
 
-    public static final Block CHERRY_TORCH = registerTorchBlock("cherry_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).sound(SoundType.CHERRY_WOOD)));
-    public static final Block CHERRY_WALL_TORCH = registerTorchBlock("cherry_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(CHERRY_TORCH).sound(SoundType.CHERRY_WOOD)));
-    public static final Item CHERRY_TORCH_I = registerFireTorchItem("cherry_torch", new StandingAndWallBlockItem(CHERRY_TORCH, CHERRY_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block CHERRY_TORCH = createTorchBlock("cherry");
+    public static final Block CHERRY_WALL_TORCH = createTorchBlock("cherry", CHERRY_TORCH);
 
-    public static final Block MANGROVE_TORCH = registerTorchBlock("mangrove_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
-    public static final Block MANGROVE_WALL_TORCH = registerTorchBlock("mangrove_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(MANGROVE_TORCH)));
-    public static final Item MANGROVE_TORCH_I = registerFireTorchItem("mangrove_torch", new StandingAndWallBlockItem(MANGROVE_TORCH, MANGROVE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block MANGROVE_TORCH = createTorchBlock("mangrove");
+    public static final Block MANGROVE_WALL_TORCH = createTorchBlock("mangrove", MANGROVE_TORCH);
 
-    public static final Block DARK_OAK_TORCH = registerTorchBlock("dark_oak_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
-    public static final Block DARK_OAK_WALL_TORCH = registerTorchBlock("dark_oak_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(DARK_OAK_TORCH)));
-    public static final Item DARK_OAK_TORCH_I = registerFireTorchItem("dark_oak_torch", new StandingAndWallBlockItem(DARK_OAK_TORCH, DARK_OAK_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block DARK_OAK_TORCH = createTorchBlock("dark_oak");
+    public static final Block DARK_OAK_WALL_TORCH = createTorchBlock("dark_oak", DARK_OAK_TORCH);
 
-    public static final Block ACACIA_TORCH = registerTorchBlock("acacia_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
-    public static final Block ACACIA_WALL_TORCH = registerTorchBlock("acacia_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(ACACIA_TORCH)));
-    public static final Item ACACIA_TORCH_I = registerFireTorchItem("acacia_torch", new StandingAndWallBlockItem(ACACIA_TORCH, ACACIA_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block ACACIA_TORCH = createTorchBlock("acacia");
+    public static final Block ACACIA_WALL_TORCH = createTorchBlock("acacia", ACACIA_TORCH);
 
-    public static final Block JUNGLE_TORCH = registerTorchBlock("jungle_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
-    public static final Block JUNGLE_WALL_TORCH = registerTorchBlock("jungle_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(JUNGLE_TORCH)));
-    public static final Item JUNGLE_TORCH_I = registerFireTorchItem("jungle_torch", new StandingAndWallBlockItem(JUNGLE_TORCH, JUNGLE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block JUNGLE_TORCH = createTorchBlock("jungle");
+    public static final Block JUNGLE_WALL_TORCH = createTorchBlock("jungle", JUNGLE_TORCH);
 
-    public static final Block BIRCH_TORCH = registerTorchBlock("birch_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
-    public static final Block BIRCH_WALL_TORCH = registerTorchBlock("birch_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(BIRCH_TORCH)));
-    public static final Item BIRCH_TORCH_I = registerFireTorchItem("birch_torch", new StandingAndWallBlockItem(BIRCH_TORCH, BIRCH_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block BIRCH_TORCH = createTorchBlock("birch");
+    public static final Block BIRCH_WALL_TORCH = createTorchBlock("birch", BIRCH_TORCH);
 
-    public static final Block SPRUCE_TORCH = registerTorchBlock("spruce_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH)));
-    public static final Block SPRUCE_WALL_TORCH = registerTorchBlock("spruce_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(SPRUCE_TORCH)));
-    public static final Item SPRUCE_TORCH_I = registerFireTorchItem("spruce_torch", new StandingAndWallBlockItem(SPRUCE_TORCH, SPRUCE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block SPRUCE_TORCH = createTorchBlock("spruce");
+    public static final Block SPRUCE_WALL_TORCH = createTorchBlock("spruce", SPRUCE_TORCH);
 
     
     // Soul Torch BLocks + Soul Wall Torch Blocks + Soul Torch Items (Reverse Order)
-    public static final Block WARPED_SOUL_TORCH = registerTorchBlock("warped_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Block WARPED_SOUL_WALL_TORCH = registerTorchBlock("warped_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(WARPED_SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item WARPED_SOUL_TORCH_I = registerSoulTorchItem("warped_soul_torch", new StandingAndWallBlockItem(WARPED_SOUL_TORCH, WARPED_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block WARPED_SOUL_TORCH = createTorchBlock("warped", "soul");
+    public static final Block WARPED_SOUL_WALL_TORCH = createTorchBlock("warped", WARPED_SOUL_TORCH, "soul");
 
-    public static final Block CRIMSON_SOUL_TORCH = registerTorchBlock("crimson_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Block CRIMSON_SOUL_WALL_TORCH = registerTorchBlock("crimson_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(CRIMSON_SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item CRIMSON_SOUL_TORCH_I = registerSoulTorchItem("crimson_soul_torch", new StandingAndWallBlockItem(CRIMSON_SOUL_TORCH, CRIMSON_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block CRIMSON_SOUL_TORCH = createTorchBlock("crimson", "soul");
+    public static final Block CRIMSON_SOUL_WALL_TORCH = createTorchBlock("crimson", CRIMSON_SOUL_TORCH, "soul");
 
-    public static final Block BAMBOO_SOUL_TORCH = registerTorchBlock("bamboo_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).sound(SoundType.BAMBOO_WOOD)));
-    public static final Block BAMBOO_SOUL_WALL_TORCH = registerTorchBlock("bamboo_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(BAMBOO_SOUL_TORCH).sound(SoundType.BAMBOO_WOOD)));
-    public static final Item BAMBOO_SOUL_TORCH_I = registerSoulTorchItem("bamboo_soul_torch", new StandingAndWallBlockItem(BAMBOO_SOUL_TORCH, BAMBOO_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block BAMBOO_SOUL_TORCH = createTorchBlock("bamboo", "soul");
+    public static final Block BAMBOO_SOUL_WALL_TORCH = createTorchBlock("bamboo", BAMBOO_SOUL_TORCH, "soul");
 
-    public static final Block CHERRY_SOUL_TORCH = registerTorchBlock("cherry_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).sound(SoundType.CHERRY_WOOD)));
-    public static final Block CHERRY_SOUL_WALL_TORCH = registerTorchBlock("cherry_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(CHERRY_SOUL_TORCH).sound(SoundType.CHERRY_WOOD)));
-    public static final Item CHERRY_SOUL_TORCH_I = registerSoulTorchItem("cherry_soul_torch", new StandingAndWallBlockItem(CHERRY_SOUL_TORCH, CHERRY_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block CHERRY_SOUL_TORCH = createTorchBlock("cherry", "soul");
+    public static final Block CHERRY_SOUL_WALL_TORCH = createTorchBlock("cherry", CHERRY_SOUL_TORCH, "soul");
 
-    public static final Block MANGROVE_SOUL_TORCH = registerTorchBlock("mangrove_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
-    public static final Block MANGROVE_SOUL_WALL_TORCH = registerTorchBlock("mangrove_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(MANGROVE_SOUL_TORCH)));
-    public static final Item MANGROVE_SOUL_TORCH_I = registerSoulTorchItem("mangrove_soul_torch", new StandingAndWallBlockItem(MANGROVE_SOUL_TORCH, MANGROVE_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block MANGROVE_SOUL_TORCH = createTorchBlock("mangrove", "soul");
+    public static final Block MANGROVE_SOUL_WALL_TORCH = createTorchBlock("mangrove", MANGROVE_SOUL_TORCH, "soul");
 
-    public static final Block DARK_OAK_SOUL_TORCH = registerTorchBlock("dark_oak_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
-    public static final Block DARK_OAK_SOUL_WALL_TORCH = registerTorchBlock("dark_oak_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(DARK_OAK_SOUL_TORCH)));
-    public static final Item DARK_OAK_SOUL_TORCH_I = registerSoulTorchItem("dark_oak_soul_torch", new StandingAndWallBlockItem(DARK_OAK_SOUL_TORCH, DARK_OAK_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block DARK_OAK_SOUL_TORCH = createTorchBlock("dark_oak", "soul");
+    public static final Block DARK_OAK_SOUL_WALL_TORCH = createTorchBlock("dark_oak", DARK_OAK_SOUL_TORCH, "soul");
 
-    public static final Block ACACIA_SOUL_TORCH = registerTorchBlock("acacia_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
-    public static final Block ACACIA_SOUL_WALL_TORCH = registerTorchBlock("acacia_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(ACACIA_SOUL_TORCH)));
-    public static final Item ACACIA_SOUL_TORCH_I = registerSoulTorchItem("acacia_soul_torch", new StandingAndWallBlockItem(ACACIA_SOUL_TORCH, ACACIA_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block ACACIA_SOUL_TORCH = createTorchBlock("acacia", "soul");
+    public static final Block ACACIA_SOUL_WALL_TORCH = createTorchBlock("acacia", ACACIA_SOUL_TORCH, "soul");
 
-    public static final Block JUNGLE_SOUL_TORCH = registerTorchBlock("jungle_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
-    public static final Block JUNGLE_SOUL_WALL_TORCH = registerTorchBlock("jungle_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(JUNGLE_SOUL_TORCH)));
-    public static final Item JUNGLE_SOUL_TORCH_I = registerSoulTorchItem("jungle_soul_torch", new StandingAndWallBlockItem(JUNGLE_SOUL_TORCH, JUNGLE_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block JUNGLE_SOUL_TORCH = createTorchBlock("jungle", "soul");
+    public static final Block JUNGLE_SOUL_WALL_TORCH = createTorchBlock("jungle", JUNGLE_SOUL_TORCH, "soul");
 
-    public static final Block BIRCH_SOUL_TORCH = registerTorchBlock("birch_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
-    public static final Block BIRCH_SOUL_WALL_TORCH = registerTorchBlock("birch_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(BIRCH_SOUL_TORCH)));
-    public static final Item BIRCH_SOUL_TORCH_I = registerSoulTorchItem("birch_soul_torch", new StandingAndWallBlockItem(BIRCH_SOUL_TORCH, BIRCH_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block BIRCH_SOUL_TORCH = createTorchBlock("birch", "soul");
+    public static final Block BIRCH_SOUL_WALL_TORCH = createTorchBlock("birch", BIRCH_SOUL_TORCH, "soul");
 
-    public static final Block SPRUCE_SOUL_TORCH = registerTorchBlock("spruce_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH)));
-    public static final Block SPRUCE_SOUL_WALL_TORCH = registerTorchBlock("spruce_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(SPRUCE_SOUL_TORCH)));
-    public static final Item SPRUCE_SOUL_TORCH_I = registerSoulTorchItem("spruce_soul_torch", new StandingAndWallBlockItem(SPRUCE_SOUL_TORCH, SPRUCE_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block SPRUCE_SOUL_TORCH = createTorchBlock("spruce", "soul");
+    public static final Block SPRUCE_SOUL_WALL_TORCH = createTorchBlock("spruce", SPRUCE_SOUL_TORCH, "soul");
 
 
     // Redstone Torch BLocks + Redstone Wall Torch Blocks + Redstone Torch Items (Reverse Order)
-    public static final Block WARPED_REDSTONE_TORCH = registerTorchBlock("warped_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Block WARPED_REDSTONE_WALL_TORCH = registerTorchBlock("warped_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(WARPED_REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item WARPED_REDSTONE_TORCH_I = registerRedstoneTorchItem("warped_redstone_torch", new StandingAndWallBlockItem(WARPED_REDSTONE_TORCH, WARPED_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block WARPED_REDSTONE_TORCH = createTorchBlock("warped", "redstone");
+    public static final Block WARPED_REDSTONE_WALL_TORCH = createTorchBlock("warped", WARPED_REDSTONE_TORCH, "redstone");
 
-    public static final Block CRIMSON_REDSTONE_TORCH = registerTorchBlock("crimson_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Block CRIMSON_REDSTONE_WALL_TORCH = registerTorchBlock("crimson_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(CRIMSON_REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item CRIMSON_REDSTONE_TORCH_I = registerRedstoneTorchItem("crimson_redstone_torch", new StandingAndWallBlockItem(CRIMSON_REDSTONE_TORCH, CRIMSON_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block CRIMSON_REDSTONE_TORCH = createTorchBlock("crimson", "redstone");
+    public static final Block CRIMSON_REDSTONE_WALL_TORCH = createTorchBlock("crimson", CRIMSON_REDSTONE_TORCH, "redstone");
 
-    public static final Block BAMBOO_REDSTONE_TORCH = registerTorchBlock("bamboo_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH).sound(SoundType.BAMBOO_WOOD)));
-    public static final Block BAMBOO_REDSTONE_WALL_TORCH = registerTorchBlock("bamboo_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(BAMBOO_REDSTONE_TORCH).sound(SoundType.BAMBOO_WOOD)));
-    public static final Item BAMBOO_REDSTONE_TORCH_I = registerRedstoneTorchItem("bamboo_redstone_torch", new StandingAndWallBlockItem(BAMBOO_REDSTONE_TORCH, BAMBOO_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block BAMBOO_REDSTONE_TORCH = createTorchBlock("bamboo", "redstone");
+    public static final Block BAMBOO_REDSTONE_WALL_TORCH = createTorchBlock("bamboo", BAMBOO_REDSTONE_TORCH, "redstone");
 
-    public static final Block CHERRY_REDSTONE_TORCH = registerTorchBlock("cherry_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH).sound(SoundType.CHERRY_WOOD)));
-    public static final Block CHERRY_REDSTONE_WALL_TORCH = registerTorchBlock("cherry_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(CHERRY_REDSTONE_TORCH).sound(SoundType.CHERRY_WOOD)));
-    public static final Item CHERRY_REDSTONE_TORCH_I = registerRedstoneTorchItem("cherry_redstone_torch", new StandingAndWallBlockItem(CHERRY_REDSTONE_TORCH, CHERRY_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block CHERRY_REDSTONE_TORCH = createTorchBlock("cherry", "redstone");
+    public static final Block CHERRY_REDSTONE_WALL_TORCH = createTorchBlock("cherry", CHERRY_REDSTONE_TORCH, "redstone");
 
-    public static final Block MANGROVE_REDSTONE_TORCH = registerTorchBlock("mangrove_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
-    public static final Block MANGROVE_REDSTONE_WALL_TORCH = registerTorchBlock("mangrove_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(MANGROVE_REDSTONE_TORCH)));
-    public static final Item MANGROVE_REDSTONE_TORCH_I = registerRedstoneTorchItem("mangrove_redstone_torch", new StandingAndWallBlockItem(MANGROVE_REDSTONE_TORCH, MANGROVE_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block MANGROVE_REDSTONE_TORCH = createTorchBlock("mangrove", "redstone");
+    public static final Block MANGROVE_REDSTONE_WALL_TORCH = createTorchBlock("mangrove", MANGROVE_REDSTONE_TORCH, "redstone");
 
-    public static final Block DARK_OAK_REDSTONE_TORCH = registerTorchBlock("dark_oak_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
-    public static final Block DARK_OAK_REDSTONE_WALL_TORCH = registerTorchBlock("dark_oak_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(DARK_OAK_REDSTONE_TORCH)));
-    public static final Item DARK_OAK_REDSTONE_TORCH_I = registerRedstoneTorchItem("dark_oak_redstone_torch", new StandingAndWallBlockItem(DARK_OAK_REDSTONE_TORCH, DARK_OAK_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block DARK_OAK_REDSTONE_TORCH = createTorchBlock("dark_oak", "redstone");
+    public static final Block DARK_OAK_REDSTONE_WALL_TORCH = createTorchBlock("dark_oak", DARK_OAK_REDSTONE_TORCH, "redstone");
 
-    public static final Block ACACIA_REDSTONE_TORCH = registerTorchBlock("acacia_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
-    public static final Block ACACIA_REDSTONE_WALL_TORCH = registerTorchBlock("acacia_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(ACACIA_REDSTONE_TORCH)));
-    public static final Item ACACIA_REDSTONE_TORCH_I = registerRedstoneTorchItem("acacia_redstone_torch", new StandingAndWallBlockItem(ACACIA_REDSTONE_TORCH, ACACIA_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block ACACIA_REDSTONE_TORCH = createTorchBlock("acacia", "redstone");
+    public static final Block ACACIA_REDSTONE_WALL_TORCH = createTorchBlock("acacia", ACACIA_REDSTONE_TORCH, "redstone");
 
-    public static final Block JUNGLE_REDSTONE_TORCH = registerTorchBlock("jungle_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
-    public static final Block JUNGLE_REDSTONE_WALL_TORCH = registerTorchBlock("jungle_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(JUNGLE_REDSTONE_TORCH)));
-    public static final Item JUNGLE_REDSTONE_TORCH_I = registerRedstoneTorchItem("jungle_redstone_torch", new StandingAndWallBlockItem(JUNGLE_REDSTONE_TORCH, JUNGLE_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block JUNGLE_REDSTONE_TORCH = createTorchBlock("jungle", "redstone");
+    public static final Block JUNGLE_REDSTONE_WALL_TORCH = createTorchBlock("jungle", JUNGLE_REDSTONE_TORCH, "redstone");
 
-    public static final Block BIRCH_REDSTONE_TORCH = registerTorchBlock("birch_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
-    public static final Block BIRCH_REDSTONE_WALL_TORCH = registerTorchBlock("birch_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(BIRCH_REDSTONE_TORCH)));
-    public static final Item BIRCH_REDSTONE_TORCH_I = registerRedstoneTorchItem("birch_redstone_torch", new StandingAndWallBlockItem(BIRCH_REDSTONE_TORCH, BIRCH_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block BIRCH_REDSTONE_TORCH = createTorchBlock("birch", "redstone");
+    public static final Block BIRCH_REDSTONE_WALL_TORCH = createTorchBlock("birch", BIRCH_REDSTONE_TORCH, "redstone");
 
-    public static final Block SPRUCE_REDSTONE_TORCH = registerTorchBlock("spruce_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH)));
-    public static final Block SPRUCE_REDSTONE_WALL_TORCH = registerTorchBlock("spruce_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(SPRUCE_REDSTONE_TORCH)));
-    public static final Item SPRUCE_REDSTONE_TORCH_I = registerRedstoneTorchItem("spruce_redstone_torch", new StandingAndWallBlockItem(SPRUCE_REDSTONE_TORCH, SPRUCE_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Block SPRUCE_REDSTONE_TORCH = createTorchBlock("spruce", "redstone");
+    public static final Block SPRUCE_REDSTONE_WALL_TORCH = createTorchBlock("spruce", SPRUCE_REDSTONE_TORCH, "redstone");
+
+    public static List<Block> more_torch_blocks = new ArrayList<>();
+
+    private static Block createTorchBlock(String woodType) {
+        return createTorchBlock(woodType, null, "");
+    }
+
+    private static Block createTorchBlock(String woodType, Block standingTorchBlock) {
+        return createTorchBlock(woodType, standingTorchBlock, "");
+    }
+
+    private static Block createTorchBlock(String woodType, String torchType) {
+        return createTorchBlock(woodType, null, torchType);
+    }
+
+    private static Block createTorchBlock(String woodType, Block standingTorchBlock, String torchType) {
+        SimpleParticleType flame;
+        BlockBehaviour.Properties torchProperties;
+        Block torchBlock;
+        String torchTypeInName = torchType;
+        if(!torchTypeInName.isEmpty()){torchTypeInName = "_" + torchTypeInName;}
+        if(standingTorchBlock != null) {torchTypeInName += "_wall";}
+        String torchName =  woodType + torchTypeInName + "_torch";
+        switch (torchType) {
+            case "soul" -> {
+                flame = ParticleTypes.SOUL_FIRE_FLAME;
+                torchProperties = BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(blockStatex -> 10).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
+            }
+            case "redstone" -> {
+                flame = null;
+                torchProperties = BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(litBlockEmission(7)).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
+            }
+            default -> {
+                flame = ParticleTypes.FLAME;
+                torchProperties = BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(blockStatex -> 14).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
+            }
+        }
+        torchProperties.setId(ResourceKey.create(Registries.BLOCK, MoreTorchVariants.asId(torchName)));
+        if (standingTorchBlock != null) {
+            torchProperties.overrideLootTable(standingTorchBlock.getLootTable()).overrideDescription(standingTorchBlock.getDescriptionId());
+        }
+        if (woodType.matches("crimson|warped")) {
+            torchProperties.sound(SoundType.NETHER_WOOD);
+        }
+        else if (woodType.equals("cherry")) {
+            torchProperties.sound(SoundType.CHERRY_WOOD);
+        }
+        else if (woodType.equals("bamboo")) {
+            torchProperties.sound(SoundType.BAMBOO_WOOD);
+        }
+        if (torchType.equals("redstone")) {
+            if (standingTorchBlock != null) {
+                torchBlock = new RedstoneWallTorchBlock(torchProperties);
+            } else {
+                torchBlock = new RedstoneTorchBlock(torchProperties);
+            }
+        } else if (standingTorchBlock != null) {
+            torchBlock = new WallTorchBlock(flame, torchProperties);
+        } else {
+            torchBlock = new TorchBlock(flame, torchProperties);
+        }
+        LOGGER.info(torchProperties.toString());
+        return torchBlock;
+    }
+
+    private static void registerTorchBlock(Block torchBlock, String torchName){
+        Registry.register(BuiltInRegistries.BLOCK, asId(torchName), torchBlock);
+    }
+
+    public static void registerTorchBlocks(){
+        registerTorchBlock(WARPED_TORCH, "warped_torch");
+        registerTorchBlock(WARPED_WALL_TORCH, "warped_wall_torch");
+        registerTorchBlock(CRIMSON_TORCH, "crimson_torch");
+        registerTorchBlock(CRIMSON_WALL_TORCH, "crimson_wall_torch");
+        registerTorchBlock(BAMBOO_TORCH, "bamboo_torch");
+        registerTorchBlock(BAMBOO_WALL_TORCH, "bamboo_wall_torch");
+        registerTorchBlock(CHERRY_TORCH, "cherry_torch");
+        registerTorchBlock(CHERRY_WALL_TORCH, "cherry_wall_torch");
+        registerTorchBlock(MANGROVE_TORCH, "mangrove_torch");
+        registerTorchBlock(MANGROVE_WALL_TORCH, "mangrove_wall_torch");
+        registerTorchBlock(DARK_OAK_TORCH, "dark_oak_torch");
+        registerTorchBlock(DARK_OAK_WALL_TORCH, "dark_oak_wall_torch");
+        registerTorchBlock(ACACIA_TORCH, "acacia_torch");
+        registerTorchBlock(ACACIA_WALL_TORCH, "acacia_wall_torch");
+        registerTorchBlock(JUNGLE_TORCH, "jungle_torch");
+        registerTorchBlock(JUNGLE_WALL_TORCH, "jungle_wall_torch");
+        registerTorchBlock(BIRCH_TORCH, "birch_torch");
+        registerTorchBlock(BIRCH_WALL_TORCH, "birch_wall_torch");
+        registerTorchBlock(SPRUCE_TORCH, "spruce_torch");
+        registerTorchBlock(SPRUCE_WALL_TORCH, "spruce_wall_torch");
+        registerTorchBlock(WARPED_SOUL_TORCH, "warped_soul_torch");
+        registerTorchBlock(WARPED_SOUL_WALL_TORCH, "warped_soul_wall_torch");
+        registerTorchBlock(CRIMSON_SOUL_TORCH, "crimson_soul_torch");
+        registerTorchBlock(CRIMSON_SOUL_WALL_TORCH, "crimson_soul_wall_torch");
+        registerTorchBlock(BAMBOO_SOUL_TORCH, "bamboo_soul_torch");
+        registerTorchBlock(BAMBOO_SOUL_WALL_TORCH, "bamboo_soul_wall_torch");
+        registerTorchBlock(CHERRY_SOUL_TORCH, "cherry_soul_torch");
+        registerTorchBlock(CHERRY_SOUL_WALL_TORCH, "cherry_soul_wall_torch");
+        registerTorchBlock(MANGROVE_SOUL_TORCH, "mangrove_soul_torch");
+        registerTorchBlock(MANGROVE_SOUL_WALL_TORCH, "mangrove_soul_wall_torch");
+        registerTorchBlock(DARK_OAK_SOUL_TORCH, "dark_oak_soul_torch");
+        registerTorchBlock(DARK_OAK_SOUL_WALL_TORCH, "dark_oak_soul_wall_torch");
+        registerTorchBlock(ACACIA_SOUL_TORCH, "acacia_soul_torch");
+        registerTorchBlock(ACACIA_SOUL_WALL_TORCH, "acacia_soul_wall_torch");
+        registerTorchBlock(JUNGLE_SOUL_TORCH, "jungle_soul_torch");
+        registerTorchBlock(JUNGLE_SOUL_WALL_TORCH, "jungle_soul_wall_torch");
+        registerTorchBlock(BIRCH_SOUL_TORCH, "birch_soul_torch");
+        registerTorchBlock(BIRCH_SOUL_WALL_TORCH, "birch_soul_wall_torch");
+        registerTorchBlock(SPRUCE_SOUL_TORCH, "spruce_soul_torch");
+        registerTorchBlock(SPRUCE_SOUL_WALL_TORCH, "spruce_soul_wall_torch");
+        registerTorchBlock(WARPED_REDSTONE_TORCH, "warped_redstone_torch");
+        registerTorchBlock(WARPED_REDSTONE_WALL_TORCH, "warped_redstone_wall_torch");
+        registerTorchBlock(CRIMSON_REDSTONE_TORCH, "crimson_redstone_torch");
+        registerTorchBlock(CRIMSON_REDSTONE_WALL_TORCH, "crimson_redstone_wall_torch");
+        registerTorchBlock(BAMBOO_REDSTONE_TORCH, "bamboo_redstone_torch");
+        registerTorchBlock(BAMBOO_REDSTONE_WALL_TORCH, "bamboo_redstone_wall_torch");
+        registerTorchBlock(CHERRY_REDSTONE_TORCH, "cherry_redstone_torch");
+        registerTorchBlock(CHERRY_REDSTONE_WALL_TORCH, "cherry_redstone_wall_torch");
+        registerTorchBlock(MANGROVE_REDSTONE_TORCH, "mangrove_redstone_torch");
+        registerTorchBlock(MANGROVE_REDSTONE_WALL_TORCH, "mangrove_redstone_wall_torch");
+        registerTorchBlock(DARK_OAK_REDSTONE_TORCH, "dark_oak_redstone_torch");
+        registerTorchBlock(DARK_OAK_REDSTONE_WALL_TORCH, "dark_oak_redstone_wall_torch");
+        registerTorchBlock(ACACIA_REDSTONE_TORCH, "acacia_redstone_torch");
+        registerTorchBlock(ACACIA_REDSTONE_WALL_TORCH, "acacia_redstone_wall_torch");
+        registerTorchBlock(JUNGLE_REDSTONE_TORCH, "jungle_redstone_torch");
+        registerTorchBlock(JUNGLE_REDSTONE_WALL_TORCH, "jungle_redstone_wall_torch");
+        registerTorchBlock(BIRCH_REDSTONE_TORCH, "birch_redstone_torch");
+        registerTorchBlock(BIRCH_REDSTONE_WALL_TORCH, "birch_redstone_wall_torch");
+        registerTorchBlock(SPRUCE_REDSTONE_TORCH, "spruce_redstone_torch");
+        registerTorchBlock(SPRUCE_REDSTONE_WALL_TORCH, "spruce_redstone_wall_torch");
+    }
 }
