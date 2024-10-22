@@ -1,5 +1,5 @@
 {
-    "parent": "minecraft:block/template_torch",
+    "parent": "minecraft:block/template_redstone_torch",
     "textures": {
         "torch": "quad-mstv-mtv:block/crimson_redstone_torch_off"
     }
