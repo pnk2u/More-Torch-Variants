@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "fire_torches",
   "key": {
-    "/": {
-      "item": "mstv-base:spruce_stick"
-    },
-    "C": {
-      "tag": "minecraft:coals"
-    }
+    "/": "mstv-base:spruce_stick",
+    "C": "#minecraft:coals"
   },
   "pattern": [
     "C  ",

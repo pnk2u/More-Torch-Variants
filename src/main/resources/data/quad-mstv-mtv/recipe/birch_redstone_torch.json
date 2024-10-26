@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "redstone_torches",
   "key": {
-    "/": {
-      "item": "mstv-base:birch_stick"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    }
+    "/": "mstv-base:birch_stick",
+    "R": "minecraft:redstone"
   },
   "pattern": [
     "R  ",

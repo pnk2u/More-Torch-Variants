@@ -3,16 +3,10 @@
   "category": "misc",
   "group": "fire_torches",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
+    "#": "minecraft:stick",
     "X": [
-      {
-        "item": "minecraft:coal"
-      },
-      {
-        "item": "minecraft:charcoal"
-      }
+      "minecraft:coal",
+      "minecraft:charcoal"
     ]
   },
   "pattern": [

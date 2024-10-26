@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "redstone_torches",
   "key": {
-    "#": {
-      "item": "minecraft:stick"
-    },
-    "X": {
-      "item": "minecraft:redstone"
-    }
+    "#": "minecraft:stick",
+    "X": "minecraft:redstone"
   },
   "pattern": [
     "X",

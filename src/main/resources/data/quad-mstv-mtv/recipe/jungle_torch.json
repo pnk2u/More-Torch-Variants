@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "fire_torches",
   "key": {
-    "/": {
-      "item": "mstv-base:jungle_stick"
-    },
-    "C": {
-      "tag": "minecraft:coals"
-    }
+    "/": "mstv-base:jungle_stick",
+    "C": "#minecraft:coals"
   },
   "pattern": [
     "C  ",
