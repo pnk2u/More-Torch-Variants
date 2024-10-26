@@ -3,12 +3,8 @@
   "category": "redstone",
   "group": "redstone_torches",
   "key": {
-    "/": {
-      "item": "minecraft:bamboo"
-    },
-    "R": {
-      "item": "minecraft:redstone"
-    }
+    "/": "minecraft:bamboo",
+    "R": "minecraft:redstone"
   },
   "pattern": [
     "R  ",

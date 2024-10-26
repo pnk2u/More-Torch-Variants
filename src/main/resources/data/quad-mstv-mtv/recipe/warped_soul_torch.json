@@ -3,15 +3,9 @@
   "category": "misc",
   "group": "soul_torches",
   "key": {
-    "/": {
-      "item": "mstv-base:warped_stick"
-    },
-    "C": {
-      "tag": "minecraft:coals"
-    },
-    "S": {
-      "tag": "minecraft:soul_fire_base_blocks"
-    }
+    "/": "mstv-base:warped_stick",
+    "C": "#minecraft:coals",
+    "S": "#minecraft:soul_fire_base_blocks"
   },
   "pattern": [
     "C  ",

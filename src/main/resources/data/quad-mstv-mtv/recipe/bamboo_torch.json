@@ -3,12 +3,8 @@
   "category": "misc",
   "group": "fire_torches",
   "key": {
-    "/": {
-      "item": "minecraft:bamboo"
-    },
-    "C": {
-      "tag": "minecraft:coals"
-    }
+    "/": "minecraft:bamboo",
+    "C": "#minecraft:coals"
   },
   "pattern": [
     "C  ",
