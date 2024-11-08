@@ -24,6 +24,9 @@
       "de.pnku.mstv_mtv.MoreTorchVariantsClient"
     ]
   },
+  "mixins": [
+    "mstv-mtv.mixins.json"
+  ],
   "depends": {
 		"fabricloader": ">=${loader_version}",
 		"minecraft": ">=${minecraft_version}",
