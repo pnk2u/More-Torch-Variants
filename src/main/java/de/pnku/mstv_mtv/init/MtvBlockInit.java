@@ -13,13 +13,16 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static de.pnku.mstv_mtv.MoreTorchVariants.asId;
 
 public class MtvBlockInit {
 
     public static final List<Block> more_torch_blocks = new ArrayList<>();
+    public static final Set<String> torch_ids = new HashSet<>();
 
     private static Block registerTorchBlock(String name, Block torchBlock) {
         more_torch_blocks.add(torchBlock);
@@ -28,11 +31,13 @@ public class MtvBlockInit {
 
     public static Item registerFireTorchItem(String name, Item torchItem) {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.TORCH, torchItem));
+        torch_ids.add(asId(name).toString());
         return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
     }
 
     public static Item registerSoulTorchItem(String name, Item torchItem) {
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.SOUL_TORCH, torchItem));
+        torch_ids.add(asId(name).toString());
         return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
     }
 
