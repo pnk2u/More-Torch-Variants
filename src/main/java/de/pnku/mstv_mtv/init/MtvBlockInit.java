@@ -176,7 +176,6 @@ public class MtvBlockInit {
         } else {
             torchBlock = new TorchBlock(flame, torchProperties);
         }
-        LOGGER.info(torchProperties.toString());
         return torchBlock;
     }
 
