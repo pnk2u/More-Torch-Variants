@@ -52,7 +52,7 @@ dependencies {
 	modCompileOnly "curse.maven:more-stick-variants-1096913:${project.mstv_version_id}"
 
 	//NEA
-	modCompileOnly files("res/notenoughanimations-fabric-1.7.6-mc${project.p_mc_version}.jar")
+	modCompileOnly files("res/notenoughanimations-fabric-1.8.1-mc${project.p_mc_version}.jar")
 }
 
 processResources {

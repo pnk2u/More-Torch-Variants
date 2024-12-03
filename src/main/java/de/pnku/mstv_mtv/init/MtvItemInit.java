@@ -17,13 +17,17 @@ import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static de.pnku.mstv_mtv.MoreTorchVariants.LOGGER;
 import static de.pnku.mstv_mtv.MoreTorchVariants.asId;
 import static de.pnku.mstv_mtv.init.MtvBlockInit.*;
 
 public class MtvItemInit {
+
+    public static final Set<String> torch_ids = new HashSet<>();
 
     //Fire Torch Items (Reverse Order)
     public static final Item WARPED_TORCH_I = createTorchItem(WARPED_TORCH, WARPED_WALL_TORCH);
@@ -97,14 +101,17 @@ public class MtvItemInit {
 
     private static void registerFireTorchItem(Item fireTorchItem, String torchName) {
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), fireTorchItem);
+        torch_ids.add(asId(torchName).toString());
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.TORCH, fireTorchItem));
     }
     private static void registerSoulTorchItem(Item soulTorchItem, String torchName){
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), soulTorchItem);
+        torch_ids.add(asId(torchName).toString());
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.SOUL_TORCH, soulTorchItem));
     }
     private static void registerRedstoneTorchItem(Item redstoneTorchItem, String torchName){
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), redstoneTorchItem);
+        torch_ids.add(asId(torchName).toString());
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
     }

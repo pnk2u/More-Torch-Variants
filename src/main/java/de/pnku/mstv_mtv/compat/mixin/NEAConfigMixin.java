@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import static de.pnku.mstv_mtv.init.MtvBlockInit.torch_ids;
+import static de.pnku.mstv_mtv.init.MtvItemInit.torch_ids;
 
 @Mixin(NEABaseMod.class)
 public abstract class NEAConfigMixin {
