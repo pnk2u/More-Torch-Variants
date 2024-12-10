@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "quad-mstv-mtv:fire_torch_variants"
-    },
-    "X": {
-      "item": "minecraft:iron_nugget"
-    }
+    "#": "#quad-mstv-mtv:fire_torch_variants",
+    "X": "minecraft:iron_nugget"
   },
   "pattern": [
     "XXX",
