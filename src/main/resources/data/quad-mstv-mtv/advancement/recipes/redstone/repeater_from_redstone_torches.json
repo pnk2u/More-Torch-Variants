@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_redstone_torch": {
+    "has_redstone_torches": {
       "conditions": {
         "items": [
           {
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_redstone_torch"
+      "has_redstone_torches"
     ]
   ],
   "rewards": {
     "recipes": [
-      "minecraft:repeater"
+      "minecraft:repeater_from_redstone_torches"
     ]
   }
 }
