@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "soul_torches",
+  "key": {
+    "/": "mstv-base:pale_oak_stick",
+    "C": "#minecraft:coals",
+    "S": "#minecraft:soul_fire_base_blocks"
+  },
+  "pattern": [
+    "C  ",
+    "/  ",
+    "S  "
+  ],
+  "result": {
+    "count": 4,
+    "id": "quad-mstv-mtv:pale_oak_soul_torch"
+  }
+}

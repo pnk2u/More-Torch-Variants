@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "fire_torches",
+  "key": {
+    "/": "mstv-base:pale_oak_stick",
+    "C": "#minecraft:coals"
+  },
+  "pattern": [
+    "C  ",
+    "/  "
+  ],
+  "result": {
+    "count": 4,
+    "id": "quad-mstv-mtv:pale_oak_torch"
+  }
+}

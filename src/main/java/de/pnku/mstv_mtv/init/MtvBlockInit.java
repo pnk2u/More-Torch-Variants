@@ -40,6 +40,9 @@ public class MtvBlockInit {
     public static final Block DARK_OAK_TORCH = createTorchBlock("dark_oak");
     public static final Block DARK_OAK_WALL_TORCH = createTorchBlock("dark_oak", DARK_OAK_TORCH);
 
+    public static final Block PALE_OAK_TORCH = createTorchBlock("pale_oak");
+    public static final Block PALE_OAK_WALL_TORCH = createTorchBlock("pale_oak", PALE_OAK_TORCH);
+
     public static final Block ACACIA_TORCH = createTorchBlock("acacia");
     public static final Block ACACIA_WALL_TORCH = createTorchBlock("acacia", ACACIA_TORCH);
 
@@ -72,6 +75,9 @@ public class MtvBlockInit {
     public static final Block DARK_OAK_SOUL_TORCH = createTorchBlock("dark_oak", "soul");
     public static final Block DARK_OAK_SOUL_WALL_TORCH = createTorchBlock("dark_oak", DARK_OAK_SOUL_TORCH, "soul");
 
+    public static final Block PALE_OAK_SOUL_TORCH = createTorchBlock("pale_oak", "soul");
+    public static final Block PALE_OAK_SOUL_WALL_TORCH = createTorchBlock("pale_oak", PALE_OAK_SOUL_TORCH, "soul");
+
     public static final Block ACACIA_SOUL_TORCH = createTorchBlock("acacia", "soul");
     public static final Block ACACIA_SOUL_WALL_TORCH = createTorchBlock("acacia", ACACIA_SOUL_TORCH, "soul");
 
@@ -103,6 +109,9 @@ public class MtvBlockInit {
 
     public static final Block DARK_OAK_REDSTONE_TORCH = createTorchBlock("dark_oak", "redstone");
     public static final Block DARK_OAK_REDSTONE_WALL_TORCH = createTorchBlock("dark_oak", DARK_OAK_REDSTONE_TORCH, "redstone");
+
+    public static final Block PALE_OAK_REDSTONE_TORCH = createTorchBlock("pale_oak", "redstone");
+    public static final Block PALE_OAK_REDSTONE_WALL_TORCH = createTorchBlock("pale_oak", PALE_OAK_REDSTONE_TORCH, "redstone");
 
     public static final Block ACACIA_REDSTONE_TORCH = createTorchBlock("acacia", "redstone");
     public static final Block ACACIA_REDSTONE_WALL_TORCH = createTorchBlock("acacia", ACACIA_REDSTONE_TORCH, "redstone");
@@ -196,6 +205,8 @@ public class MtvBlockInit {
         registerTorchBlock(MANGROVE_WALL_TORCH, "mangrove_wall_torch");
         registerTorchBlock(DARK_OAK_TORCH, "dark_oak_torch");
         registerTorchBlock(DARK_OAK_WALL_TORCH, "dark_oak_wall_torch");
+        registerTorchBlock(PALE_OAK_TORCH, "pale_oak_torch");
+        registerTorchBlock(PALE_OAK_WALL_TORCH, "pale_oak_wall_torch");
         registerTorchBlock(ACACIA_TORCH, "acacia_torch");
         registerTorchBlock(ACACIA_WALL_TORCH, "acacia_wall_torch");
         registerTorchBlock(JUNGLE_TORCH, "jungle_torch");
@@ -216,6 +227,8 @@ public class MtvBlockInit {
         registerTorchBlock(MANGROVE_SOUL_WALL_TORCH, "mangrove_soul_wall_torch");
         registerTorchBlock(DARK_OAK_SOUL_TORCH, "dark_oak_soul_torch");
         registerTorchBlock(DARK_OAK_SOUL_WALL_TORCH, "dark_oak_soul_wall_torch");
+        registerTorchBlock(PALE_OAK_SOUL_TORCH, "pale_oak_soul_torch");
+        registerTorchBlock(PALE_OAK_SOUL_WALL_TORCH, "pale_oak_soul_wall_torch");
         registerTorchBlock(ACACIA_SOUL_TORCH, "acacia_soul_torch");
         registerTorchBlock(ACACIA_SOUL_WALL_TORCH, "acacia_soul_wall_torch");
         registerTorchBlock(JUNGLE_SOUL_TORCH, "jungle_soul_torch");
@@ -236,6 +249,8 @@ public class MtvBlockInit {
         registerTorchBlock(MANGROVE_REDSTONE_WALL_TORCH, "mangrove_redstone_wall_torch");
         registerTorchBlock(DARK_OAK_REDSTONE_TORCH, "dark_oak_redstone_torch");
         registerTorchBlock(DARK_OAK_REDSTONE_WALL_TORCH, "dark_oak_redstone_wall_torch");
+        registerTorchBlock(PALE_OAK_REDSTONE_TORCH, "pale_oak_redstone_torch");
+        registerTorchBlock(PALE_OAK_REDSTONE_WALL_TORCH, "pale_oak_redstone_wall_torch");
         registerTorchBlock(ACACIA_REDSTONE_TORCH, "acacia_redstone_torch");
         registerTorchBlock(ACACIA_REDSTONE_WALL_TORCH, "acacia_redstone_wall_torch");
         registerTorchBlock(JUNGLE_REDSTONE_TORCH, "jungle_redstone_torch");

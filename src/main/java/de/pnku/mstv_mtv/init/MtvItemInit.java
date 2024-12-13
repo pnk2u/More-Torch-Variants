@@ -42,6 +42,8 @@ public class MtvItemInit {
 
     public static final Item DARK_OAK_TORCH_I = createTorchItem(DARK_OAK_TORCH, DARK_OAK_WALL_TORCH);
 
+    public static final Item PALE_OAK_TORCH_I = createTorchItem(PALE_OAK_TORCH, PALE_OAK_WALL_TORCH);
+
     public static final Item ACACIA_TORCH_I = createTorchItem(ACACIA_TORCH, ACACIA_WALL_TORCH);
 
     public static final Item JUNGLE_TORCH_I = createTorchItem(JUNGLE_TORCH, JUNGLE_WALL_TORCH);
@@ -64,6 +66,8 @@ public class MtvItemInit {
 
     public static final Item DARK_OAK_SOUL_TORCH_I = createTorchItem(DARK_OAK_SOUL_TORCH, DARK_OAK_SOUL_WALL_TORCH);
 
+    public static final Item PALE_OAK_SOUL_TORCH_I = createTorchItem(PALE_OAK_SOUL_TORCH, PALE_OAK_SOUL_WALL_TORCH);
+
     public static final Item ACACIA_SOUL_TORCH_I = createTorchItem(ACACIA_SOUL_TORCH, ACACIA_SOUL_WALL_TORCH);
 
     public static final Item JUNGLE_SOUL_TORCH_I = createTorchItem(JUNGLE_SOUL_TORCH, JUNGLE_SOUL_WALL_TORCH);
@@ -84,6 +88,8 @@ public class MtvItemInit {
     public static final Item MANGROVE_REDSTONE_TORCH_I = createTorchItem(MANGROVE_REDSTONE_TORCH, MANGROVE_REDSTONE_WALL_TORCH);
 
     public static final Item DARK_OAK_REDSTONE_TORCH_I = createTorchItem(DARK_OAK_REDSTONE_TORCH, DARK_OAK_REDSTONE_WALL_TORCH);
+
+    public static final Item PALE_OAK_REDSTONE_TORCH_I = createTorchItem(PALE_OAK_REDSTONE_TORCH, PALE_OAK_REDSTONE_WALL_TORCH);
 
     public static final Item ACACIA_REDSTONE_TORCH_I = createTorchItem(ACACIA_REDSTONE_TORCH, ACACIA_REDSTONE_WALL_TORCH);
 
@@ -123,6 +129,7 @@ public class MtvItemInit {
         registerFireTorchItem(CHERRY_TORCH_I, "cherry_torch");
         registerFireTorchItem(MANGROVE_TORCH_I, "mangrove_torch");
         registerFireTorchItem(DARK_OAK_TORCH_I, "dark_oak_torch");
+        registerFireTorchItem(PALE_OAK_TORCH_I, "pale_oak_torch");
         registerFireTorchItem(ACACIA_TORCH_I, "acacia_torch");
         registerFireTorchItem(JUNGLE_TORCH_I, "jungle_torch");
         registerFireTorchItem(BIRCH_TORCH_I, "birch_torch");
@@ -133,6 +140,7 @@ public class MtvItemInit {
         registerSoulTorchItem(CHERRY_SOUL_TORCH_I, "cherry_soul_torch");
         registerSoulTorchItem(MANGROVE_SOUL_TORCH_I, "mangrove_soul_torch");
         registerSoulTorchItem(DARK_OAK_SOUL_TORCH_I, "dark_oak_soul_torch");
+        registerSoulTorchItem(PALE_OAK_SOUL_TORCH_I, "pale_oak_soul_torch");
         registerSoulTorchItem(ACACIA_SOUL_TORCH_I, "acacia_soul_torch");
         registerSoulTorchItem(JUNGLE_SOUL_TORCH_I, "jungle_soul_torch");
         registerSoulTorchItem(BIRCH_SOUL_TORCH_I, "birch_soul_torch");
@@ -143,6 +151,7 @@ public class MtvItemInit {
         registerRedstoneTorchItem(CHERRY_REDSTONE_TORCH_I, "cherry_redstone_torch");
         registerRedstoneTorchItem(MANGROVE_REDSTONE_TORCH_I, "mangrove_redstone_torch");
         registerRedstoneTorchItem(DARK_OAK_REDSTONE_TORCH_I, "dark_oak_redstone_torch");
+        registerRedstoneTorchItem(PALE_OAK_REDSTONE_TORCH_I, "pale_oak_redstone_torch");
         registerRedstoneTorchItem(ACACIA_REDSTONE_TORCH_I, "acacia_redstone_torch");
         registerRedstoneTorchItem(JUNGLE_REDSTONE_TORCH_I, "jungle_redstone_torch");
         registerRedstoneTorchItem(BIRCH_REDSTONE_TORCH_I, "birch_redstone_torch");
