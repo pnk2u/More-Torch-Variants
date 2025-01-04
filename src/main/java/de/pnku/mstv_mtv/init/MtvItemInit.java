@@ -28,6 +28,7 @@ import static de.pnku.mstv_mtv.init.MtvBlockInit.*;
 public class MtvItemInit {
 
     public static final Set<String> torch_ids = new HashSet<>();
+    public static final List<Item> more_redstone_torches = new ArrayList<>();
 
     //Fire Torch Items (Reverse Order)
     public static final Item WARPED_TORCH_I = createTorchItem(WARPED_TORCH, WARPED_WALL_TORCH);
@@ -118,6 +119,7 @@ public class MtvItemInit {
     private static void registerRedstoneTorchItem(Item redstoneTorchItem, String torchName){
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), redstoneTorchItem);
         torch_ids.add(asId(torchName).toString());
+        more_redstone_torches.add(redstoneTorchItem);
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
         ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
     }
