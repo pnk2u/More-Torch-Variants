@@ -42,13 +42,15 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.layered() {
 		officialMojangMappings()
-		parchment("org.parchmentmc.data:parchment-${project.minecraft_version}:${project.parchment_date}@zip")
+		parchment("org.parchmentmc.data:parchment-${project.p_mc_version}:${project.parchment_date}@zip")
 	}
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fapi_version}"
 
-	// MStV (modImplementation datagen only -> modCompileOnly for release)
-	modCompileOnly files("res/MoreStickVariants-${project.mstv_version}+${project.minecraft_version}-Fabric.jar")
+
+	// MStV
+	modDatagenImplementation "curse.maven:more-stick-variants-1096913:${project.mstv_version_id}"
+	modCompileOnly "curse.maven:more-stick-variants-1096913:${project.mstv_version_id}"
 
 	//NEA
 	modCompileOnly files("res/notenoughanimations-fabric-1.7.6-mc${project.minecraft_version}.jar")
