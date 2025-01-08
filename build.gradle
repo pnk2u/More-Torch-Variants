@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.6-SNAPSHOT'
+	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -49,11 +49,10 @@ dependencies {
 
 
 	// MStV
-	modDatagenImplementation "curse.maven:more-stick-variants-1096913:${project.mstv_version_id}"
 	modCompileOnly "curse.maven:more-stick-variants-1096913:${project.mstv_version_id}"
 
 	//NEA
-	modCompileOnly files("res/notenoughanimations-fabric-1.7.6-mc${project.minecraft_version}.jar")
+	modCompileOnly files("res/notenoughanimations-fabric-1.7.6-mc${project.p_mc_version}.jar")
 }
 
 processResources {
