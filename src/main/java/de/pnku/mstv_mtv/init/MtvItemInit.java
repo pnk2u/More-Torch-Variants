@@ -102,7 +102,9 @@ public class MtvItemInit {
 
 
     private static Item createTorchItem(Block standingTorchBlock, Block wallTorchBlock) {
-        Item.Properties torchItemProperties = new Item.Properties().setId(ResourceKey.create(Registries.ITEM, BuiltInRegistries.BLOCK.getKey(standingTorchBlock))).useBlockDescriptionPrefix();
+        String torchBlockDescId = standingTorchBlock.getDescriptionId();
+        Item.Properties torchItemPropertiesI = new Item.Properties().setId(ResourceKey.create(Registries.ITEM, BuiltInRegistries.BLOCK.getKey(standingTorchBlock))).useBlockDescriptionPrefix();
+        Item.Properties torchItemProperties = (torchBlockDescId.contains("warped") || torchBlockDescId.contains("crimson")) ? torchItemPropertiesI.fireResistant() : torchItemPropertiesI; 
         return new StandingAndWallBlockItem(standingTorchBlock, wallTorchBlock, Direction.DOWN, torchItemProperties);
     }
 
