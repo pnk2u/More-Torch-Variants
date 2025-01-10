@@ -52,11 +52,11 @@ public class MtvBlockInit {
     // Fire Torch Blocks + Fire Wall Torch Blocks + Fire Torch Items (Reverse Order)
     public static final Block WARPED_TORCH = registerTorchBlock("warped_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Block WARPED_WALL_TORCH = registerTorchBlock("warped_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(WARPED_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item WARPED_TORCH_I = registerFireTorchItem("warped_torch", new StandingAndWallBlockItem(WARPED_TORCH, WARPED_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Item WARPED_TORCH_I = registerFireTorchItem("warped_torch", new StandingAndWallBlockItem(WARPED_TORCH, WARPED_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
 
     public static final Block CRIMSON_TORCH = registerTorchBlock("crimson_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Block CRIMSON_WALL_TORCH = registerTorchBlock("crimson_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(CRIMSON_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item CRIMSON_TORCH_I = registerFireTorchItem("crimson_torch", new StandingAndWallBlockItem(CRIMSON_TORCH, CRIMSON_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Item CRIMSON_TORCH_I = registerFireTorchItem("crimson_torch", new StandingAndWallBlockItem(CRIMSON_TORCH, CRIMSON_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
 
     public static final Block BAMBOO_TORCH = registerTorchBlock("bamboo_torch", new TorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.TORCH).sound(SoundType.BAMBOO_WOOD)));
     public static final Block BAMBOO_WALL_TORCH = registerTorchBlock("bamboo_wall_torch",new WallTorchBlock(ParticleTypes.FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.WALL_TORCH).dropsLike(BAMBOO_TORCH).sound(SoundType.BAMBOO_WOOD)));
@@ -94,11 +94,11 @@ public class MtvBlockInit {
     // Soul Torch BLocks + Soul Wall Torch Blocks + Soul Torch Items (Reverse Order)
     public static final Block WARPED_SOUL_TORCH = registerTorchBlock("warped_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Block WARPED_SOUL_WALL_TORCH = registerTorchBlock("warped_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(WARPED_SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item WARPED_SOUL_TORCH_I = registerSoulTorchItem("warped_soul_torch", new StandingAndWallBlockItem(WARPED_SOUL_TORCH, WARPED_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Item WARPED_SOUL_TORCH_I = registerSoulTorchItem("warped_soul_torch", new StandingAndWallBlockItem(WARPED_SOUL_TORCH, WARPED_SOUL_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
 
     public static final Block CRIMSON_SOUL_TORCH = registerTorchBlock("crimson_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Block CRIMSON_SOUL_WALL_TORCH = registerTorchBlock("crimson_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(CRIMSON_SOUL_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item CRIMSON_SOUL_TORCH_I = registerSoulTorchItem("crimson_soul_torch", new StandingAndWallBlockItem(CRIMSON_SOUL_TORCH, CRIMSON_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Item CRIMSON_SOUL_TORCH_I = registerSoulTorchItem("crimson_soul_torch", new StandingAndWallBlockItem(CRIMSON_SOUL_TORCH, CRIMSON_SOUL_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
 
     public static final Block BAMBOO_SOUL_TORCH = registerTorchBlock("bamboo_soul_torch", new TorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_TORCH).sound(SoundType.BAMBOO_WOOD)));
     public static final Block BAMBOO_SOUL_WALL_TORCH = registerTorchBlock("bamboo_soul_wall_torch",new WallTorchBlock(ParticleTypes.SOUL_FIRE_FLAME, BlockBehaviour.Properties.ofFullCopy(Blocks.SOUL_WALL_TORCH).dropsLike(BAMBOO_SOUL_TORCH).sound(SoundType.BAMBOO_WOOD)));
@@ -136,11 +136,11 @@ public class MtvBlockInit {
     // Redstone Torch BLocks + Redstone Wall Torch Blocks + Redstone Torch Items (Reverse Order)
     public static final Block WARPED_REDSTONE_TORCH = registerTorchBlock("warped_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Block WARPED_REDSTONE_WALL_TORCH = registerTorchBlock("warped_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(WARPED_REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item WARPED_REDSTONE_TORCH_I = registerRedstoneTorchItem("warped_redstone_torch", new StandingAndWallBlockItem(WARPED_REDSTONE_TORCH, WARPED_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Item WARPED_REDSTONE_TORCH_I = registerRedstoneTorchItem("warped_redstone_torch", new StandingAndWallBlockItem(WARPED_REDSTONE_TORCH, WARPED_REDSTONE_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
 
     public static final Block CRIMSON_REDSTONE_TORCH = registerTorchBlock("crimson_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Block CRIMSON_REDSTONE_WALL_TORCH = registerTorchBlock("crimson_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(CRIMSON_REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
-    public static final Item CRIMSON_REDSTONE_TORCH_I = registerRedstoneTorchItem("crimson_redstone_torch", new StandingAndWallBlockItem(CRIMSON_REDSTONE_TORCH, CRIMSON_REDSTONE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
+    public static final Item CRIMSON_REDSTONE_TORCH_I = registerRedstoneTorchItem("crimson_redstone_torch", new StandingAndWallBlockItem(CRIMSON_REDSTONE_TORCH, CRIMSON_REDSTONE_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
 
     public static final Block BAMBOO_REDSTONE_TORCH = registerTorchBlock("bamboo_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_TORCH).sound(SoundType.BAMBOO_WOOD)));
     public static final Block BAMBOO_REDSTONE_WALL_TORCH = registerTorchBlock("bamboo_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.REDSTONE_WALL_TORCH).dropsLike(BAMBOO_REDSTONE_TORCH).sound(SoundType.BAMBOO_WOOD)));
