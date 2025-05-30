@@ -1,5 +1,5 @@
 {
-    "parent": "quad-mstv-mtv:block/template_torch",
+    "parent": "minecraft:block/template_torch",
     "textures": {
         "torch": "quad-mstv-mtv:block/dark_oak_soul_torch"
     }

@@ -190,6 +190,7 @@ public class MtvBlockInit {
 
     private static void registerTorchBlock(Block torchBlock, String torchName){
         Registry.register(BuiltInRegistries.BLOCK, asId(torchName), torchBlock);
+        more_torch_blocks.add(torchBlock);
     }
 
     public static void registerTorchBlocks(){
