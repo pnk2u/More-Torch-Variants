@@ -1,6 +1,7 @@
 {
-    "parent": "minecraft:item/generated",
+    "parent": "minecraft:item/template_redstone_torch",
     "textures": {
-        "layer0": "quad-mstv-mtv:block/acacia_redstone_torch"
+        "layer0": "quad-mstv-mtv:block/acacia_redstone_torch",
+        "torch": "quad-mstv-mtv:block/acacia_redstone_torch"
     }
 }

@@ -1,0 +1,26 @@
+### 1.1.5:
+- `1.21.4+`: Fix broken models for any resource pack
+### 1.1.3:
+- Add Ukrainian Translation (Thanks to [Starman](https://modrinth.com/user/StarmanMine142))
+### 1.1.1:
+- Revert changes from version `1.0.7` that unexpectedly broke the crafting recipe of Oak (/Vanilla) Torches
+## 1.1.0:
+- `1.21.3`, `1.21.4`: Add Pale Oak Torches
+### 1.0.7:
+- Add missing recipes for Lantern, Soul Lantern and Jack o'Lantern (thanks to [Vehru](https://www.curseforge.com/members/vehru) for pointing it out)
+- (Re)move all recipes of this mod out of the minecraft namespace for better compatibility
+### 1.0.6:
+- Add support for [tr7zw](https://modrinth.com/user/tr7zw)'s [Not Enough Animations](https://modrinth.com/mod/not-enough-animations)(/[First Person Model](https://modrinth.com/mod/first-person-model))
+- `1.21.4`; Update to `1.21.4`
+### 1.0.5:
+- Fix broken Redstone Torch Variant models when placed on sides of blocks
+### 1.0.4:
+- Fix broken crafting recipes on `1.21.2`, `1.21.3`
+### 1.0.3:
+- `1.21.2`, `1.21.3`: Update to `1.21.2`, `1.21.3`
+- Fix Dark Oak Torch names not properly declaring their torch type
+### 1.0.2:
+- Fix crash when using this mod on a server
+### 1.0.1:
+- Add `wall_torches` to block tags, so Piglins get properly scared by and **Quad** `1.3.0+` can replace (soul) torches placed on walls
+# 1.0.0
