@@ -8,6 +8,9 @@
 - Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.8`
 - Mod Loader: _Fabric_
 - Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api), [<img width='16' src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png"> `More Stick Variants (MStV)`](https://modrinth.com/mod/more-stick-variants)
+- Added support for:
+    - [<img width='16' src="https://raw.githubusercontent.com/tr7zw/FirstPersonModel/main/src/main/resources/icon.png"> `First Person Mod`](https://modrinth.com/mod/first-person-model)
+    - [<img width='16' src="https://raw.githubusercontent.com/tr7zw/NotEnoughAnimations/main/src/main/resources/icon.png"> `Not Enough Animations`](https://modrinth.com/mod/not-enough-animations)
 
 ### ᴬ⃯ ᵦ⃔ Translations
 
