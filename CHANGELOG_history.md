@@ -1,4 +1,6 @@
-### 1.1.5:
+### 1.1.7
+- Added compatibitility with [Torchified resource pack](https://www.modrinth.com/resourcepack/torchified)
+- Fix incompatibility with 0.17.x versions of Fabric Loader### 1.1.5:
 - `1.21.4+`: Fix broken models for any resource pack
 ### 1.1.3:
 - Add Ukrainian Translation (Thanks to [Starman](https://modrinth.com/user/StarmanMine142))
