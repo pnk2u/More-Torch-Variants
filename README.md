@@ -11,6 +11,7 @@
 - Added support for:
     - [<img width='16' src="https://raw.githubusercontent.com/tr7zw/FirstPersonModel/main/src/main/resources/icon.png"> `First Person Mod`](https://modrinth.com/mod/first-person-model)
     - [<img width='16' src="https://raw.githubusercontent.com/tr7zw/NotEnoughAnimations/main/src/main/resources/icon.png"> `Not Enough Animations`](https://modrinth.com/mod/not-enough-animations)
+    - [<img width='16' src="https://raw.githubusercontent.com/itsmeow/torchified/main/src/main/resources/icon.png"> `Torchified `](https://www.modrinth.com/resourcepack/torchified)<sup>RP¹</sup>
 
 ### ᴬ⃯ ᵦ⃔ Translations
 
@@ -24,7 +25,7 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 ### Changelog History
 
 <!--CHANGELOG:START-->
-### 1.1.7
+### 1.1.7:
 - Added compatibitility with [Torchified resource pack](https://www.modrinth.com/resourcepack/torchified)
 - Fix incompatibility with 0.17.x versions of Fabric Loader
 ### 1.1.5:
