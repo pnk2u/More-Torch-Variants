@@ -150,15 +150,15 @@ public class MtvBlockInit {
         switch (torchType) {
             case "soul" -> {
                 flame = ParticleTypes.SOUL_FIRE_FLAME;
-                torchProperties = BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(blockStatex -> 10).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
+                torchProperties = BlockBehaviour.Properties.of().noCollision().instabreak().lightLevel(blockStatex -> 10).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
             }
             case "redstone" -> {
                 flame = null;
-                torchProperties = BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(litBlockEmission(7)).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
+                torchProperties = BlockBehaviour.Properties.of().noCollision().instabreak().lightLevel(litBlockEmission(7)).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
             }
             default -> {
                 flame = ParticleTypes.FLAME;
-                torchProperties = BlockBehaviour.Properties.of().noCollission().instabreak().lightLevel(blockStatex -> 14).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
+                torchProperties = BlockBehaviour.Properties.of().noCollision().instabreak().lightLevel(blockStatex -> 14).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY);
             }
         }
         torchProperties.setId(ResourceKey.create(Registries.BLOCK, MoreTorchVariants.asId(torchName)));
