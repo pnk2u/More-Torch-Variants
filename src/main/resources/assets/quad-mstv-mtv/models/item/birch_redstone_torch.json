@@ -2,6 +2,7 @@
     "parent": "minecraft:item/template_redstone_torch",
     "textures": {
         "layer0": "quad-mstv-mtv:block/birch_redstone_torch",
+        "0": "quad-mstv-mtv:block/birch_redstone_torch",
         "torch": "quad-mstv-mtv:block/birch_redstone_torch"
     }
 }

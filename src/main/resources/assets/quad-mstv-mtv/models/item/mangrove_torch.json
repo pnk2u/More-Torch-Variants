@@ -1,6 +1,7 @@
 {
     "parent": "minecraft:item/torch",
     "textures": {
-        "layer0": "quad-mstv-mtv:block/mangrove_torch"
+        "layer0": "quad-mstv-mtv:block/mangrove_torch",
+        "0": "quad-mstv-mtv:block/mangrove_torch"
     }
 }
