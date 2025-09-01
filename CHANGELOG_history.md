@@ -1,3 +1,7 @@
+### 1.1.8:
+- Add compatibility with [Vanilla Tweaks: 3D Items (Resource Pack)](https://www.vanillatweaks.net/picker/resource-packs/#3DTiles)
+- `1.21.4⁺`: Fix Pale Oak Torches not being affected by the Torchified resource pack compatibility
+- `1.21.9`: Update to 1.21.9
 ### 1.1.7
 - Added compatibitility with [Torchified resource pack](https://www.modrinth.com/resourcepack/torchified)
 - Fix incompatibility with 0.17.x versions of Fabric Loader
