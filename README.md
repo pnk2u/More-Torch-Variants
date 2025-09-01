@@ -26,7 +26,11 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 ### Changelog History
 
 <!--CHANGELOG:START-->
-### 1.1.7:
+### 1.1.8:
+- Add compatibility with [Vanilla Tweaks: 3D Items (Resource Pack)](https://www.vanillatweaks.net/picker/resource-packs/#3DTiles)
+- `1.21.4⁺`: Fix Pale Oak Torches not being affected by the Torchified resource pack compatibility
+- `1.21.9`: Update to 1.21.9
+### 1.1.7
 - Added compatibitility with [Torchified resource pack](https://www.modrinth.com/resourcepack/torchified)
 - Fix incompatibility with 0.17.x versions of Fabric Loader
 ### 1.1.5:
@@ -54,7 +58,7 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 - Fix crash when using this mod on a server
 ### 1.0.1:
 - Add `wall_torches` to block tags, so Piglins get properly scared by and **Quad** `1.3.0+` can replace (soul) torches placed on walls
-<!--CHANGELOG:END-->
+# 1.0.0<!--CHANGELOG:END-->
 
 > _This section is automatically updated with each new release and only includes already published releases._
 
