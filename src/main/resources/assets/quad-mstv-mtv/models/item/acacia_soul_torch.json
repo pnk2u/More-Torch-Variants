@@ -2,6 +2,7 @@
     "parent": "minecraft:item/soul_torch",
     "textures": {
         "layer0": "quad-mstv-mtv:block/acacia_soul_torch",
+        "0": "quad-mstv-mtv:block/acacia_soul_torch",
         "3": "quad-mstv-mtv:block/acacia_soul_torch"
     }
 }

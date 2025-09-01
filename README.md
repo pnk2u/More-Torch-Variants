@@ -8,6 +8,11 @@
 - Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.8`
 - Mod Loader: _Fabric_
 - Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api), [<img width='16' src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png"> `More Stick Variants (MStV)`](https://modrinth.com/mod/more-stick-variants)
+- Added support for:
+    - [<img width='16' src="https://raw.githubusercontent.com/tr7zw/FirstPersonModel/main/src/main/resources/icon.png"> `First Person Mod`](https://modrinth.com/mod/first-person-model)
+    - [<img width='16' src="https://raw.githubusercontent.com/tr7zw/NotEnoughAnimations/main/src/main/resources/icon.png"> `Not Enough Animations`](https://modrinth.com/mod/not-enough-animations)
+    - [<img width='16' src="https://pnku.catgirl.host/i/ylkr8.png"> `Torchified (Resource Pack)`](https://www.modrinth.com/resourcepack/torchified)
+    - [<img width='16' src="https://www.vanillatweaks.net/assets/resources/icons/resourcepacks/1.21/3DTiles.png"> `Vanilla Tweaks: 3D Items (Resource Pack)`](https://www.vanillatweaks.net/picker/resource-packs/#3DTiles)
 
 ### ᴬ⃯ ᵦ⃔ Translations
 
@@ -21,7 +26,7 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 ### Changelog History
 
 <!--CHANGELOG:START-->
-### 1.1.7
+### 1.1.7:
 - Added compatibitility with [Torchified resource pack](https://www.modrinth.com/resourcepack/torchified)
 - Fix incompatibility with 0.17.x versions of Fabric Loader
 ### 1.1.5:
@@ -49,7 +54,7 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 - Fix crash when using this mod on a server
 ### 1.0.1:
 - Add `wall_torches` to block tags, so Piglins get properly scared by and **Quad** `1.3.0+` can replace (soul) torches placed on walls
-# 1.0.0<!--CHANGELOG:END-->
+<!--CHANGELOG:END-->
 
 > _This section is automatically updated with each new release and only includes already published releases._
 
