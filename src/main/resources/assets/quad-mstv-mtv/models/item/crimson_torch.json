@@ -1,6 +1,7 @@
 {
     "parent": "minecraft:item/torch",
     "textures": {
-        "layer0": "quad-mstv-mtv:block/crimson_torch"
+        "layer0": "quad-mstv-mtv:block/crimson_torch",
+        "0": "quad-mstv-mtv:block/crimson_torch"
     }
 }
