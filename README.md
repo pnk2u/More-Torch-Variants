@@ -26,6 +26,8 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 ### Changelog History
 
 <!--CHANGELOG:START-->
+### 1.1.9:
+- `1.21.4(-9)`: Fix requiring incorrect Minecraft version, instead now requires 1.21.4⁺ as intended
 ### 1.1.8:
 - Add compatibility with [Vanilla Tweaks: 3D Items (Resource Pack)](https://www.vanillatweaks.net/picker/resource-packs/#3DTiles)
 - `1.21.4⁺`: Fix Pale Oak Torches not being affected by the Torchified resource pack compatibility
@@ -58,7 +60,8 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 - Fix crash when using this mod on a server
 ### 1.0.1:
 - Add `wall_torches` to block tags, so Piglins get properly scared by and **Quad** `1.3.0+` can replace (soul) torches placed on walls
-# 1.0.0<!--CHANGELOG:END-->
+# 1.0.0
+<!--CHANGELOG:END-->
 
 > _This section is automatically updated with each new release and only includes already published releases._
 
