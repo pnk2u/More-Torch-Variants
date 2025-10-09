@@ -5,7 +5,7 @@
 
 ### Compatibility
 
-- Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.8`
+- Minecraft: `1.20.1`, `1.21(.1)`, `1.21.4`~`1.21.10`
 - Mod Loader: _Fabric_
 - Requires: [`Fabric API`](https://modrinth.com/mod/fabric-api), [<img width='16' src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/More-Stick-Variants/pres/logo/logo_c.png"> `More Stick Variants (MStV)`](https://modrinth.com/mod/more-stick-variants)
 - Added support for:
@@ -60,7 +60,8 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 - Fix crash when using this mod on a server
 ### 1.0.1:
 - Add `wall_torches` to block tags, so Piglins get properly scared by and **Quad** `1.3.0+` can replace (soul) torches placed on walls
-# 1.0.0# 1.0.0<!--CHANGELOG:END-->
+# 1.0.0
+<!--CHANGELOG:END-->
 
 > _This section is automatically updated with each new release and only includes already published releases._
 
