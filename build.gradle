@@ -114,7 +114,7 @@ def (fabric_loader_version, fabric_api_version) = getLatestFabric(releaseVersion
 def (decrementedVersion, pMinecraftVersion, mostRecentParchmentDate) = getParchmentWithDecrementedMC(releaseVersion)
 
 dependencies {
-	minecraft "com.mojang:minecraft:25w35a"
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	mappings loom.layered() {
 		officialMojangMappings()
 		parchment("org.parchmentmc.data:parchment-${pMinecraftVersion}:${mostRecentParchmentDate}@zip")
