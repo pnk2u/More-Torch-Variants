@@ -53,7 +53,6 @@ public class MtvItemInit {
 
     public static final Item SPRUCE_TORCH_I = createTorchItem(SPRUCE_TORCH, SPRUCE_WALL_TORCH);
 
-
     //Soul Torch Items (Reverse Order)
     public static final Item WARPED_SOUL_TORCH_I = createTorchItem(WARPED_SOUL_TORCH, WARPED_SOUL_WALL_TORCH);
 

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "copper_torches",
+  "key": {
+    "/": "mstv-base:warped_stick",
+    "C": "#minecraft:coals",
+    "N": "minecraft:copper_nugget"
+  },
+  "pattern": [
+    "N  ",
+    "C  ",
+    "/  "
+  ],
+  "result": {
+    "count": 4,
+    "id": "quad-mstv-mtv:warped_copper_torch"
+  }
+}

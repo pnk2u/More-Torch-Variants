@@ -3,6 +3,8 @@
   "values": [
     "quad-mstv-mtv:warped_torch",
     "quad-mstv-mtv:crimson_torch",
+    "quad-mstv-mtv:warped_copper_torch",
+    "quad-mstv-mtv:crimson_copper_torch",
     "quad-mstv-mtv:warped_soul_torch",
     "quad-mstv-mtv:crimson_soul_torch",
     "quad-mstv-mtv:warped_redstone_torch",
