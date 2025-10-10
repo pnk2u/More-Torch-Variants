@@ -55,7 +55,7 @@ public class MtvBlockInit {
     public static final Block SPRUCE_TORCH = createTorchBlock("spruce");
     public static final Block SPRUCE_WALL_TORCH = createTorchBlock("spruce", SPRUCE_TORCH);
 
-    // Soul Torch BLocks + Soul Wall Torch Blocks + Soul Torch Items (Reverse Order)
+    // Soul Torch Blocks + Soul Wall Torch Blocks + Soul Torch Items (Reverse Order)
     public static final Block WARPED_SOUL_TORCH = createTorchBlock("warped", "soul");
     public static final Block WARPED_SOUL_WALL_TORCH = createTorchBlock("warped", WARPED_SOUL_TORCH, "soul");
 
@@ -90,7 +90,7 @@ public class MtvBlockInit {
     public static final Block SPRUCE_SOUL_WALL_TORCH = createTorchBlock("spruce", SPRUCE_SOUL_TORCH, "soul");
 
 
-    // Redstone Torch BLocks + Redstone Wall Torch Blocks + Redstone Torch Items (Reverse Order)
+    // Redstone Torch Blocks + Redstone Wall Torch Blocks + Redstone Torch Items (Reverse Order)
     public static final Block WARPED_REDSTONE_TORCH = createTorchBlock("warped", "redstone");
     public static final Block WARPED_REDSTONE_WALL_TORCH = createTorchBlock("warped", WARPED_REDSTONE_TORCH, "redstone");
 
