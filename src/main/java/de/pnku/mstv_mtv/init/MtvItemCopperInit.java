@@ -52,7 +52,7 @@ public class MtvItemCopperInit {
     private static void registerCopperTorchItem(Item copperTorchItem, String torchName) {
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), copperTorchItem);
         torch_ids.add(asId(torchName).toString());
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.TORCH, copperTorchItem));
+        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.COPPER_TORCH, copperTorchItem));
     }
 
 
