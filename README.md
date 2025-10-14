@@ -26,6 +26,8 @@ Want to help translate? Feel free to open a PR to the **default branch (`1.21(.1
 ### Changelog History
 
 <!--CHANGELOG:START-->
+## 1.2.0:
+- `1.21.9(10)`: Add _Copper Torch_ variants
 ### 1.1.9:
 - `1.21.4(-9)`: Fix requiring incorrect Minecraft version, instead now requires 1.21.4⁺ as intended
 ### 1.1.8:
