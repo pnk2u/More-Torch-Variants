@@ -22,7 +22,7 @@ public class MoreTorchVariants implements ModInitializer {
 	public void onInitialize() {
 		MtvBlockInit.registerTorchBlocks();
 		MtvItemInit.registerTorchItems();
-		if (hasCopperTorch()) {
+		if (versionIsAtLeast(1,21,9)) {
 			MtvBlockCopperInit.registerCopperTorchBlocks();
 			MtvItemCopperInit.registerCopperTorchItems();
 		}
@@ -32,15 +32,15 @@ public class MoreTorchVariants implements ModInitializer {
 		return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
 	}
 
-	public static boolean hasCopperTorch() {
+	public static boolean versionIsAtLeast(int major, int minor, int patch) {
 		try {
-			boolean isDev = FabricLoader.getInstance().isDevelopmentEnvironment();
-			String className = isDev ? "net.minecraft.world.level.block.Blocks" : "net.minecraft.class_2246";
-			String fieldName = isDev ? "COPPER_TORCH" : "field_61902";
-			Class<?> blocksClass = Class.forName(className);
-			blocksClass.getDeclaredField(fieldName);
-			return true;
-		} catch (ClassNotFoundException | NoSuchFieldException e) {
+			var minecraft = FabricLoader.getInstance().getModContainer("minecraft");
+			if (minecraft.isEmpty()) throw new Exception("Couldn't find Minecraft.");
+			String[] semVer = minecraft.get().getMetadata().getVersion().getFriendlyString().split("-", 2)[0].split("\\.");
+			int x = Integer.parseInt(semVer[0]), y = Integer.parseInt(semVer[1]), z = Integer.parseInt(semVer[2]);
+			return x > major || (x == major && (y > minor || (y == minor && z >= patch)));
+		} catch (Exception e) {
+			LOGGER.error("Error checking Minecraft version", e);
 			return false;
 		}
 	}
