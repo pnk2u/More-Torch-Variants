@@ -4,7 +4,7 @@ import de.pnku.mstv_mtv.init.MtvBlockInit;
 import net.fabricmc.api.ClientModInitializer;
 
 import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderType;
 import net.minecraft.world.level.block.Block;
 
 
@@ -17,16 +17,17 @@ public class MoreTorchVariantsClient implements ClientModInitializer {
 		boolean isLegacy = mcVersion.contains("1.21.4") || mcVersion.contains("1.21.5");
 		boolean isDev = FabricLoader.getInstance().isDevelopmentEnvironment();
 		for (Block torchBlock : MtvBlockInit.more_torch_blocks) {
-			if (isLegacy) {legacyAddToRenderLayerMap(torchBlock);}
+			if (isLegacy) {legacyAddToRenderLayerMap(torchBlock, isDev);}
 			else {addToRenderLayerMap(torchBlock, isDev);}
 		}
 	}
 
-	private void legacyAddToRenderLayerMap(Block block) {
+	private void legacyAddToRenderLayerMap(Block block, boolean isDev) {
 		try {
 			Class<?> legacyBlockRenderLayerMap = Class.forName("net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap");
+			String cutoutMethodName = isDev ? "cutout" : "method_23581";
 			legacyBlockRenderLayerMap.getMethod("putBlock", Block.class, RenderType.class)
-					.invoke(legacyBlockRenderLayerMap.getField("INSTANCE").get(null), block, RenderType.cutout());
+					.invoke(legacyBlockRenderLayerMap.getField("INSTANCE").get(null), block, (RenderType) RenderType.class.getMethod(cutoutMethodName).invoke(null));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
