@@ -47,7 +47,7 @@ public class MtvBlockInit {
         return Registry.register(BuiltInRegistries.ITEM, asId(name), torchItem);
     }
 
-    public static void register() {};
+    public static void register() {}
     
     // Fire Torch Blocks + Fire Wall Torch Blocks + Fire Torch Items (Reverse Order)
     public static final Block WARPED_TORCH = registerTorchBlock("warped_torch", new TorchBlock(BlockBehaviour.Properties.copy(Blocks.TORCH).sound(SoundType.NETHER_WOOD), ParticleTypes.FLAME));
@@ -91,7 +91,7 @@ public class MtvBlockInit {
     public static final Item SPRUCE_TORCH_I = registerFireTorchItem("spruce_torch", new StandingAndWallBlockItem(SPRUCE_TORCH, SPRUCE_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
 
     
-    // Soul Torch BLocks + Soul Wall Torch Blocks + Soul Torch Items (Reverse Order)
+    // Soul Torch Blocks + Soul Wall Torch Blocks + Soul Torch Items (Reverse Order)
     public static final Block WARPED_SOUL_TORCH = registerTorchBlock("warped_soul_torch", new TorchBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_TORCH).sound(SoundType.NETHER_WOOD), ParticleTypes.SOUL_FIRE_FLAME));
     public static final Block WARPED_SOUL_WALL_TORCH = registerTorchBlock("warped_soul_wall_torch",new WallTorchBlock(BlockBehaviour.Properties.copy(Blocks.SOUL_WALL_TORCH).dropsLike(WARPED_SOUL_TORCH).sound(SoundType.NETHER_WOOD), ParticleTypes.SOUL_FIRE_FLAME));
     public static final Item WARPED_SOUL_TORCH_I = registerSoulTorchItem("warped_soul_torch", new StandingAndWallBlockItem(WARPED_SOUL_TORCH, WARPED_SOUL_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
@@ -133,7 +133,7 @@ public class MtvBlockInit {
     public static final Item SPRUCE_SOUL_TORCH_I = registerSoulTorchItem("spruce_soul_torch", new StandingAndWallBlockItem(SPRUCE_SOUL_TORCH, SPRUCE_SOUL_WALL_TORCH, new Item.Properties(), Direction.DOWN ));
 
 
-    // Redstone Torch BLocks + Redstone Wall Torch Blocks + Redstone Torch Items (Reverse Order)
+    // Redstone Torch Blocks + Redstone Wall Torch Blocks + Redstone Torch Items (Reverse Order)
     public static final Block WARPED_REDSTONE_TORCH = registerTorchBlock("warped_redstone_torch", new RedstoneTorchBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Block WARPED_REDSTONE_WALL_TORCH = registerTorchBlock("warped_redstone_wall_torch",new RedstoneWallTorchBlock(BlockBehaviour.Properties.copy(Blocks.REDSTONE_WALL_TORCH).dropsLike(WARPED_REDSTONE_TORCH).sound(SoundType.NETHER_WOOD)));
     public static final Item WARPED_REDSTONE_TORCH_I = registerRedstoneTorchItem("warped_redstone_torch", new StandingAndWallBlockItem(WARPED_REDSTONE_TORCH, WARPED_REDSTONE_WALL_TORCH, new Item.Properties().fireResistant(), Direction.DOWN ));
