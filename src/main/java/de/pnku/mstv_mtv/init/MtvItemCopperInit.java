@@ -1,6 +1,6 @@
 package de.pnku.mstv_mtv.init;
 
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -52,7 +52,7 @@ public class MtvItemCopperInit {
     private static void registerCopperTorchItem(Item copperTorchItem, String torchName) {
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), copperTorchItem);
         torch_ids.add(asId(torchName).toString());
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.COPPER_TORCH, copperTorchItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.insertAfter(Items.COPPER_TORCH, copperTorchItem));
     }
 
 

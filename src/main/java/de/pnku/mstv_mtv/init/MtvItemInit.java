@@ -1,7 +1,7 @@
 package de.pnku.mstv_mtv.init;
 
 import de.pnku.mstv_mtv.MoreTorchVariants;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.core.particles.ParticleTypes;
@@ -110,19 +110,19 @@ public class MtvItemInit {
     private static void registerFireTorchItem(Item fireTorchItem, String torchName) {
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), fireTorchItem);
         torch_ids.add(asId(torchName).toString());
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.TORCH, fireTorchItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.insertAfter(Items.TORCH, fireTorchItem));
     }
     private static void registerSoulTorchItem(Item soulTorchItem, String torchName){
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), soulTorchItem);
         torch_ids.add(asId(torchName).toString());
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.SOUL_TORCH, soulTorchItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.insertAfter(Items.SOUL_TORCH, soulTorchItem));
     }
     private static void registerRedstoneTorchItem(Item redstoneTorchItem, String torchName){
         Registry.register(BuiltInRegistries.ITEM, asId(torchName), redstoneTorchItem);
         torch_ids.add(asId(torchName).toString());
         more_redstone_torches.add(redstoneTorchItem);
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
-        ItemGroupEvents.modifyEntriesEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.addAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(entries -> entries.insertAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.REDSTONE_BLOCKS).register(entries -> entries.insertAfter(Items.REDSTONE_TORCH, redstoneTorchItem));
     }
 
     public static void registerTorchItems(){
