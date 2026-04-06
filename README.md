@@ -72,18 +72,17 @@
 ### Versions
 <a name="most-recent-version"></a>
 <!--CHANGELOG:START-->
-<a name="1.2.2"></a>
-#### 1.2.2[*](#footnote-*):
-- `26.1`: Update to <ins>26.1</ins>
+<a name="1.2.3"></a>
+#### 1.2.3[*](#footnote-*):
+- `26.1`: Fix log spam  
+    > This was due to outdated usage of Fabric API for `26.1+`.
 
-<br></br>
-<sub>License update to [`CC-BY-NC-SA-4.0`](https://creativecommons.org/licenses/by-nc-sa/4.0/) (previously [`MIT`](https://choosealicense.com/licenses/mit))</sub>
 
-<h2><sub><sub><sup><ins>Download 1.2.2 + 1.21(.1)</ins>:</sup>&#x200A;
-<a title="Download (Modrinth):&#10;More Torch Variants 1.2.2 + 1.21(.1)" href="https://www.modrinth.com/mod/SD0XUjSm/version/dm3Cksrk">
+<h2><sub><sub><sup><ins>Download 1.2.3 + 26.1</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Torch Variants 1.2.3 + 26.1" href="https://www.modrinth.com/mod/SD0XUjSm/version/Ox83vai8">
 <img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>
 <sup><img width=7 height=10 src="https://raw.githubusercontent.com/pnk2u/resources/main/ModProjects/shared/pres/icon/separator_v.svg"></sup>
-<a title="Download (Curseforge):&#10;1.2.2 + 1.21(.1) - More Torch Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-torch-variants/files/7870537">
+<a title="Download (Curseforge):&#10;1.2.3 + 26.1 - More Torch Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-torch-variants/files/7887526">
 <img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
 </sub></sub></h2>
 
