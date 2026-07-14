@@ -1,3 +1,1 @@
-<!--publish=true-->
-### 1.2.4:
-- `26.2`: Fix _Copper Torch Variants_ not being registered
+<!--publish=false-->

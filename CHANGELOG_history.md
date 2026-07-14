@@ -1,3 +1,14 @@
+<a name="1.2.4"></a>
+### 1.2.4:
+- `26.2`: Fix _Copper Torch Variants_ not being registered
+
+<h2><sub><sub><sup><ins>Download 1.2.4 + 26.1(2)</ins>:</sup>&#x200A;
+<a title="Download (Modrinth):&#10;More Torch Variants 1.2.4 + 26.1(2)" href="https://www.modrinth.com/mod/SD0XUjSm/version/mo7Heh6b">
+<img width=26 src="https://img.shields.io/badge/-%20-%23032a?style=flat&logo=modrinth"></a>&#x200A;
+<a title="Download (Curseforge):&#10;1.2.4 + 26.1(2) - More Torch Variants" href="https://www.curseforge.com/minecraft/mc-mods/more-torch-variants/files/8430323">
+<img width=26 src="https://img.shields.io/badge/--%23302a?style=flat&logo=curseforge"></a>
+</sub></sub></h2>
+
 <a name="1.2.3"></a>
 ### 1.2.3:
 - `26.1`: Fix log spam  
