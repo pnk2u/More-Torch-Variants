@@ -1,4 +1,3 @@
 <!--publish=false-->
-### 1.2.3:
-- `26.1`: Fix log spam  
-    > This was due to outdated usage of Fabric API for `26.1+`.
+### 1.2.4:
+- `26.1(2)`: Fix _Copper Torch Variants_ not being registered
